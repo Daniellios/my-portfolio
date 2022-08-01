@@ -1,20 +1,23 @@
-import { IoIosArrowDropdown } from "react-icons/io"
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
 export const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 2rem;
-  padding: 1rem;
+  /* position: fixed;
+  width: inherit;
+  max-width: inherit; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: ${(props) => props.theme.colors.background1};
+  padding: 1rem 2rem 1rem 2rem;
+  z-index: 10;
   padding-top: 2rem;
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 60px);
-    grid-column-gap: 0.5rem;
-    grid-row-gap: 0.5rem;
+    justify-content: center;
+  }
+  @media ${(props) => props.theme.breakpoints.xsm} {
+    justify-content: flex-end;
   }
 `
 
@@ -33,33 +36,69 @@ export const PortfolioDiv = styled.a`
   margin-bottom: 20px;
 `
 
-export const NavIconDiv = styled.div`
-  grid-area: 1 / 1 / 2 / 2;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 1 / 1 / 2 / 3;
+export const MenuIconWrapper = styled(motion.div)`
+  position: ${(props) => (props.isInSidebar ? "absolute" : "unset")};
+  top: ${(props) => (props.isInSidebar ? "2rem" : "unset")};
+  right: ${(props) => (props.isInSidebar ? "2rem" : "unset")};
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    color: ${(props) => props.theme.colors.hover};
+  }
+
+  @media ${(props) => props.theme.breakpoints.xsm} {
+    display: flex;
+    justify-self: center;
   }
 `
 
 export const NavLinksDiv = styled.div`
-  grid-area: 1 / 2 / 2 / 4;
   display: flex;
+  align-items: center;
+  gap: 2rem;
   justify-content: space-around;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 2 / 2 / 3 / 5;
+
+  @media ${(props) => props.theme.breakpoints.xsm} {
+    display: none;
+  }
+`
+
+export const NavLinksSidebar = styled(motion.div)`
+  display: none;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: fixed;
+  padding: 2rem;
+  flex-direction: column;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: ${(props) => props.theme.colors.background1};
+
+  @media ${(props) => props.theme.breakpoints.xsm} {
+    display: flex;
   }
 `
 
 export const NavSocialIconsDiv = styled.div`
-  grid-area: 1 / 5 / 2 / 6;
   display: flex;
+  gap: 2rem;
   justify-content: space-around;
   align-items: center;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    gap: 0;
+  }
+
   @media ${(props) => props.theme.breakpoints.sm} {
-    align-items: center;
-    grid-area: 1 / 4 / 2 / 6;
+    display: none;
   }
 `
 
@@ -81,55 +120,29 @@ export const NavLink = styled.a`
   }
 `
 
-/// DropDown Contact
-export const ContactDropDown = styled.button`
-  border: none;
-  display: flex;
-  position: relative;
-  background: none;
-  font-size: 1.7rem;
-
-  line-height: 32px;
-  color: rgba(255, 255, 255, 0.75);
-  cursor: pointer;
+export const CustomHH = styled.div`
   transition: 0.3s ease;
-
-  &:focus {
-    outline: none;
-  }
-  &:hover {
-    color: #fff;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0.4rem 0;
-  }
-  @media ${(props) => props.theme.breakpoints.md} {
-    padding: 0;
-  }
-`
-
-export const NavProductsIcon = styled(IoIosArrowDropdown)`
-  margin-left: 8px;
+  width: 3rem;
+  height: 3rem;
   display: flex;
-  align-self: center;
-  transition: 0.3s ease;
-  opacity: ${({ isOpen }) => (isOpen ? "1" : ".75")};
-  transform: ${({ isOpen }) => (isOpen ? "scaleY(-1)" : "scaleY(1)")};
-
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 50%;
+  background: #262323;
   &:hover {
-    opacity: 1;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    margin: 2px 0 0 2px;
-    width: 15px;
+    background: ${(props) => props.theme.colors.hover};
+    transform: scale(1.01);
+    cursor: pointer;
   }
 `
 
 // Social Icons
 
 export const SocialIcons = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: 0.3s ease;
   color: ${(props) => props.theme.colors.black};
   border-radius: 50px;

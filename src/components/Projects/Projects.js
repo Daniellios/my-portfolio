@@ -6,33 +6,27 @@ import {
   GridContainer,
   HeaderThree,
   TagsContainer,
-  Hr,
   Tag,
   TagList,
   TitleContent,
   UtilityList,
   Img,
   ImgContainer,
-  ImgShadow,
 } from "./ProjectsStyles"
-import {
-  Section,
-  SectionDivider,
-  SectionTitle,
-} from "../../styles/GlobalComponents"
+import { Section, SectionTitle } from "../../styles/GlobalComponents"
 import { projects } from "../../constants/constants"
 
 const Projects = () => {
   return (
-    <Section nopadding id="projects">
-      <SectionTitle main> Projects </SectionTitle>
+    <Section id="projects">
+      <SectionTitle main>Projects</SectionTitle>
       <GridContainer>
         {projects.map(
           ({ id, image, title, description, tags, source, visit }) => (
             <BlogCard key={id}>
               <ImgContainer>
                 <Img src={image} />
-                <ImgShadow />
+                {/* <ImgShadow /> */}
               </ImgContainer>
 
               <TitleContent>
@@ -40,6 +34,7 @@ const Projects = () => {
               </TitleContent>
               <CardInfo>{description}</CardInfo>
               <TagsContainer>
+                <HeaderThree>Stack</HeaderThree>
                 <TagList>
                   {tags.map((tag, i) => (
                     <Tag key={i}>{tag}</Tag>
@@ -48,8 +43,22 @@ const Projects = () => {
               </TagsContainer>
 
               <UtilityList>
-                {/* <ExternalLinks href={visit}>Code </ExternalLinks> */}
-                <ExternalLinks href={visit}>Source </ExternalLinks>
+                {source && (
+                  <ExternalLinks
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={visit}
+                  >
+                    Code
+                  </ExternalLinks>
+                )}
+                <ExternalLinks
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={visit}
+                >
+                  Source
+                </ExternalLinks>
               </UtilityList>
             </BlogCard>
           )

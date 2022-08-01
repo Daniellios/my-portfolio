@@ -3,7 +3,8 @@ import styled from "styled-components"
 export const Section = styled.section`
   display: ${(props) => (props.grid ? "grid" : "flex")};
   flex-direction: ${(props) => (props.row ? "row" : "column")};
-  padding: ${(props) => (props.nopadding ? "0" : "32px 48px 0")};
+  padding: ${(props) => (props.nopadding ? "0" : "32px 24px 0")};
+  gap: 2rem;
   margin: 0 auto;
   max-width: 1040px;
   box-sizing: content-box;
@@ -12,13 +13,13 @@ export const Section = styled.section`
   grid-template-columns: 1fr 1fr;
 
   @media ${(props) => props.theme.breakpoints.md} {
-    padding: 24px 48px 0;
+    padding: 0 2rem;
     flex-direction: column;
+    align-items: center;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: ${(props) => (props.nopadding ? "0" : "16px 16px 0")};
-
     width: calc(100vw - 32px);
     flex-direction: column;
   }
@@ -31,8 +32,8 @@ export const SectionTitle = styled.h2`
   width: max-content;
   max-width: 100%;
   background: ${(props) => props.theme.colors.black};
-  // linear-gradient(121.57deg, #bbcedd 18.77%, #dce4eb 60.15%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 16px;
   padding: ${(props) => (props.main ? "58px 0 16px" : "0")};
@@ -41,14 +42,15 @@ export const SectionTitle = styled.h2`
     font-size: ${(props) => (props.main ? "56px" : "48px")};
     line-height: ${(props) => (props.main ? "56px" : "48px")};
     margin-bottom: 12px;
+    text-align: left;
     padding: ${(props) => (props.main ? "40px 0 12px" : "0")};
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
     font-size: 32px;
     line-height: 40px;
-    font-size: ${(props) => (props.main ? "28px" : "32px")};
-    line-height: ${(props) => (props.main ? "32px" : "40px")};
+    font-size: ${(props) => (props.main ? "40px" : "32px")};
+    line-height: ${(props) => (props.main ? "40px" : "40px")};
     margin-bottom: 8px;
     padding: ${(props) => (props.main ? "16px 0 8px" : "0")};
     max-width: 100%;
@@ -65,6 +67,7 @@ export const SubSectionTitle = styled.h3`
   color: ${(props) => props.theme.colors.black};
   background: ${(props) => props.theme.colors.black};
   -webkit-background-clip: text;
+  background-clip: text;
   // -webkit-text-fill-color: transparent;
   margin-bottom: 16px;
   padding: ${(props) => (props.main ? "58px 0 16px" : "0")};
@@ -93,6 +96,7 @@ export const SectionText = styled.p`
   line-height: 40px;
   font-weight: 400;
   padding-bottom: 3.6rem;
+  text-align: left;
   color: ${(props) => props.theme.colors.primary1};
 
   @media ${(props) => props.theme.breakpoints.md} {
@@ -211,7 +215,7 @@ export const ButtonBack = styled.div`
   align-items: center;
   justify-content: center;
   margin: ${({ alt, form }) => (alt || form ? "0" : "0 0 80px")};
-  color: #00000;
+  color: #000000;
   background: ${({ alt }) =>
     alt
       ? "linear-gradient(270deg, #a24124 0%, #e37e44 100%)"

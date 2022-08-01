@@ -34,7 +34,7 @@ export const LinkItem = styled.a`
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: 8px;
+    font-size: 12px;
     line-height: 14px;
     margin-bottom: 8px;
     display: flex;
@@ -82,7 +82,8 @@ export const Slogan = styled.p`
   color: ${(props) => props.theme.colors.primary};
   min-width: 280px;
   letter-spacing: 0.02em;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 26px;
   line-height: 30px;
   padding: 1rem;
 
@@ -93,7 +94,7 @@ export const Slogan = styled.p`
 
   @media ${(props) => props.theme.breakpoints.sm} {
     line-height: 22px;
-    font-size: 14px;
+    font-size: 18px;
     min-width: 100px;
   }
 `
@@ -111,8 +112,11 @@ export const SocialContainer = styled.div`
 
 export const LinkList = styled.ul`
   border-top: 1px solid ${(props) => props.theme.colors.primary};
-  display: grid;
-  grid-template-columns: repeat(3, minmax(85px, 220px));
+  /* display: grid;
+  grid-template-columns: repeat(3, minmax(85px, 220px)); */
+  display: flex;
+  justify-content: start;
+  align-items: center;
   gap: 40px;
   padding: 40px 0 28px;
 
@@ -124,6 +128,8 @@ export const LinkList = styled.ul`
     width: 100%;
     padding: 32px 0 16px;
     gap: 16px;
+    justify-content: space-between;
+    align-items: center;
   }
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
@@ -148,7 +154,7 @@ export const LinkTitle = styled.h4`
   margin-bottom: 16px;
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: 10px;
+    font-size: 14px;
     line-height: 12px;
     margin-bottom: 8px;
   }

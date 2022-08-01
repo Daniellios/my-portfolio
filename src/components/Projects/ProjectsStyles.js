@@ -49,7 +49,8 @@ export const BlogCard = styled.div`
   border-radius: 10px;
   text-align: center;
   width: 400px;
-  height: 520px;
+  padding-bottom: 1rem;
+  /* height: 520px; */
   background: ${(props) => props.theme.colors.background1};
   border: 1px solid black;
   @media ${(props) => props.theme.breakpoints.sm} {
@@ -131,7 +132,10 @@ export const TagsContainer = styled.div`
 
 export const TagList = styled.ul`
   display: flex;
+  width: 100%;
+  flex-wrap: wrap;
   justify-content: space-around;
+  gap: 1rem;
   padding: 2rem 2rem 0 2rem;
 `
 export const Tag = styled.li`

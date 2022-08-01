@@ -17,11 +17,30 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: ${(props) => props.theme.fonts.main};
     font-size: 1.6rem;
-    background-image: '';
     background-color:  ${(props) => props.theme.colors.background1};
-    background-repeat: no-repeat;
     color: ${(props) => props.theme.colors.black};
     cursor: default;
+
+    &::-webkit-scrollbar {
+    width: 8px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    color: #e37e44;
+    background: #262323;
+    border: 3px solid #f6f7ed;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: "#c0a0b9";
+  }
+    
+
   }
   h1,h2,h3,h4,h5,h6,button {
     font-family: ${(props) => props.theme.fonts.title};

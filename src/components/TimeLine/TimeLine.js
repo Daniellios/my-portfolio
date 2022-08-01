@@ -26,7 +26,7 @@ const Timeline = () => {
   const carouselRef = useRef()
 
   const scroll = (node, left) => {
-    return node.scrollTo({ left, behavior: "smooth" })
+    return node?.scrollTo({ left, behavior: "smooth" })
   }
 
   const handleClick = (e, i) => {
@@ -71,7 +71,6 @@ const Timeline = () => {
         the field.
       </SectionText>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
-        {/* Make small animation above every milestone or period of time */}
         <>
           {TimeLineData.map((item, index) => (
             <CarouselMobileScrollNode

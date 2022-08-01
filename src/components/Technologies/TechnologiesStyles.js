@@ -97,7 +97,7 @@ export const ListParagraph = styled.p`
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 22px;
   }
 `
@@ -108,9 +108,12 @@ export const ListSkillLevel = styled.div`
 `
 
 export const ListItem = styled.li`
-  max-width: 320px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 320px;
+  text-align: center;
   row-gap: 1.5rem;
 
   @media ${(props) => props.theme.breakpoints.md} {

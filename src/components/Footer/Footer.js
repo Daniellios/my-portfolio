@@ -2,7 +2,7 @@ import React from "react"
 import { AiFillGithub, AiFillSlackCircle, AiFillLinkedin } from "react-icons/ai"
 import { FaTelegram } from "react-icons/fa"
 
-import { SocialIcons } from "../Header/HeaderStyles"
+import { SocialIcons, CustomHH } from "../Header/HeaderStyles"
 import {
   CompanyContainer,
   FooterWrapper,
@@ -17,7 +17,7 @@ import {
 
 const Footer = () => {
   return (
-    <FooterWrapper>
+    <FooterWrapper id="contacts">
       <LinkList>
         <LinkColumn>
           <LinkTitle> Call </LinkTitle>
@@ -41,11 +41,12 @@ const Footer = () => {
           <SocialIcons href="https://github.com">
             <AiFillGithub size="3rem" />
           </SocialIcons>
-          <SocialIcons href="https://github.com">
-            <AiFillSlackCircle size="3rem" />
-          </SocialIcons>
-          <SocialIcons href="https://linkedin.com">
-            <AiFillLinkedin size="3rem" />
+
+          <SocialIcons
+            href="https://hh.ru/resume/92b2ea36ff09bd84230039ed1f6f644f304b39"
+            rel="noopener noreferrer"
+          >
+            <CustomHH>hh</CustomHH>
           </SocialIcons>
           <SocialIcons href="https://t.me/D_A_N_Y_A_7">
             <FaTelegram size="3rem" />

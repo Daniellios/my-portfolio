@@ -4,8 +4,8 @@ export const projects = [
     description:
       "One of my projects on my previous position as a PixiJs developer",
     image: "/images/Hidden.png",
-    tags: ["JavaScript", "TypeScript", "PixiJs", "HTML", "CSS"],
-    source: "https://google.com",
+    tags: ["JavaScript", "TypeScript", "React", "PixiJs", "HTML", "CSS"],
+    source: null,
     visit:
       "https://drive.google.com/drive/folders/1RgRW-RVp80i7Qs_fjVID8HbSXoIZPl48?usp=sharing",
     id: 0,
@@ -15,11 +15,50 @@ export const projects = [
     description:
       "This is a mahjong game I made. This is a real commercial project!",
     image: "/images/Mahjong.png",
-    tags: ["JavaScript", "TypeScript", "PixiJs", "HTML", "CSS"],
-    source: "https://google.com",
+    tags: ["JavaScript", "TypeScript", "React", "PixiJs", "HTML", "CSS"],
+    source: null,
     visit:
       "https://drive.google.com/drive/folders/1AgifLkc0QmPan-ATlKTtLscLbLCB3586?usp=sharing",
     id: 1,
+  },
+  {
+    title: "Task Manager",
+    description: "Task manager to keep track of things you need to do",
+    image: "/images/todoapp.png",
+    tags: [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "NextJS",
+      "Tailwind",
+      "Framer Motion",
+    ],
+    source: "https://github.com/Daniellios/todo-app",
+    visit: "https://todo-app-hazel-six.vercel.app",
+    id: 3,
+  },
+]
+
+export const HeaderTitles = [
+  {
+    title: "Projects",
+    link: "#projects",
+  },
+  {
+    title: "Skills",
+    link: "#skills",
+  },
+  {
+    title: "Experience",
+    link: "#experience",
+  },
+  {
+    title: "About",
+    link: "#about",
+  },
+  {
+    title: "Contacts",
+    link: "#contacts",
   },
 ]
 
