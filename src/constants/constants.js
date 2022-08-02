@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Task Manager",
     description: "Task manager to keep track of things you need to do",
-    image: "/images/todoapp.png",
+    image: "/images/taskmanager.png",
     tags: [
       "JavaScript",
       "TypeScript",

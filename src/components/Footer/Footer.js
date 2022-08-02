@@ -1,6 +1,7 @@
 import React from "react"
 import { AiFillGithub, AiFillSlackCircle, AiFillLinkedin } from "react-icons/ai"
 import { FaTelegram } from "react-icons/fa"
+import { SiGmail } from "react-icons/si"
 
 import { SocialIcons, CustomHH } from "../Header/HeaderStyles"
 import {
@@ -39,17 +40,34 @@ const Footer = () => {
         </CompanyContainer>
 
         <SocialContainer>
-          <SocialIcons href="https://github.com">
+          <SocialIcons
+            href="https://github.com/Daniellios"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <AiFillGithub size="3rem" />
           </SocialIcons>
 
           <SocialIcons
+            href="mailto:danielo49134@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SiGmail size="3rem" />
+          </SocialIcons>
+
+          <SocialIcons
             href="https://hh.ru/resume/92b2ea36ff09bd84230039ed1f6f644f304b39"
+            target="_blank"
             rel="noopener noreferrer"
           >
             <CustomHH>hh</CustomHH>
           </SocialIcons>
-          <SocialIcons href="https://t.me/D_A_N_Y_A_7">
+          <SocialIcons
+            href="https://t.me/D_A_N_Y_A_7"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaTelegram size="3rem" />
           </SocialIcons>
         </SocialContainer>
