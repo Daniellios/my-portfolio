@@ -14,6 +14,16 @@ export default {
     hover: "#e37e44",
     black: "#262323",
     darkorange: "#a24124",
+    palette: {
+      black: "#262323",
+      white: "#262323",
+      darkOrange: "#a24124",
+      lightOrange: "#e37e44",
+      blueGray: "#dae4e5",
+      gray: "#adbcbf",
+      darkGray: "#77868b",
+      heavyDarkGray: "#53585a",
+    },
   },
   // Breakpoints for responsive design
   breakpoints: {

@@ -1,5 +1,21 @@
 export const projects = [
   {
+    title: "Task Manager",
+    description: "Task manager to keep track of things you need to do",
+    image: "/images/todoapp.png",
+    tags: [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "NextJS",
+      "Tailwind",
+      "Framer Motion",
+    ],
+    source: "https://github.com/Daniellios/todo-app",
+    visit: "https://todo-app-hazel-six.vercel.app",
+    id: 2,
+  },
+  {
     title: "Hidden Object Game",
     description:
       "One of my projects on my previous position as a PixiJs developer",
@@ -20,22 +36,6 @@ export const projects = [
     visit:
       "https://drive.google.com/drive/folders/1AgifLkc0QmPan-ATlKTtLscLbLCB3586?usp=sharing",
     id: 1,
-  },
-  {
-    title: "Task Manager",
-    description: "Task manager to keep track of things you need to do",
-    image: "/images/todoapp.png",
-    tags: [
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "NextJS",
-      "Tailwind",
-      "Framer Motion",
-    ],
-    source: "https://github.com/Daniellios/todo-app",
-    visit: "https://todo-app-hazel-six.vercel.app",
-    id: 3,
   },
 ]
 
@@ -59,6 +59,30 @@ export const HeaderTitles = [
   {
     title: "Contacts",
     link: "#contacts",
+  },
+]
+
+export const Jobs = [
+  {
+    title: "PixiJS Developer",
+    company: "PlayableArt",
+    tasks: [
+      "Developed playable ads using JS, TS, React, PixiJS, HTML, CSS",
+      "Contributed and maintained local framework",
+      "Worked on scenarios of playbles",
+      "Prepared and bundled final projects for clients",
+    ],
+    range: "December - June 2022",
+  },
+  {
+    title: "HTML Layout Designer",
+    company: "Freelance",
+    tasks: [
+      "Web-site building with JS, HTML, SCSS",
+      "Terms of refence preparation",
+      "Bundle configuration (Parcel, Gulp)",
+    ],
+    range: "September - December 2021",
   },
 ]
 

@@ -50,8 +50,8 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
     <Container isSideBarOpen>
       {/* HEADER LINKS */}
       <NavLinksDiv>
-        {HeaderTitles.map((item) => (
-          <li>
+        {HeaderTitles.map((item, index) => (
+          <li key={item + index}>
             <Link href={item.link}>
               <NavLink>{item.title}</NavLink>
             </Link>
@@ -71,11 +71,11 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
                 ? { x: 0, opacity: 1, transition: "easing" }
                 : { opacity: 0, x: "440px", transition: "easing" }
             }
-            tra
             exit={{ opacity: 0, x: "440px" }}
           >
             <MenuIconWrapper
-              isInSidebar
+              key={"closeWrap"}
+              isinsidebar="true"
               as={motion.div}
               onClick={handleModal}
               ref={buttonRef}
@@ -83,7 +83,7 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
               <AiOutlineClose size={"3rem"} />
             </MenuIconWrapper>
             {HeaderTitles.map((item) => (
-              <li onClick={() => setIsModalOpen(false)}>
+              <li key={item} onClick={() => setIsModalOpen(false)}>
                 <Link href={item.link}>
                   <NavLink>{item.title}</NavLink>
                 </Link>
@@ -92,7 +92,7 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
           </NavLinksSidebar>
         )}
       </AnimatePresence>
-      <MenuIconWrapper as={motion.div} onClick={handleModal}>
+      <MenuIconWrapper key={"menuWrap"} as={motion.div} onClick={handleModal}>
         <GiHamburgerMenu size={"3rem"} />
       </MenuIconWrapper>
 
@@ -104,15 +104,6 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
         >
           <AiFillGithub size="3rem" />
         </SocialIcons>
-
-        <SocialIcons
-          href="https://slack.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <AiFillSlackCircle size="3rem" />
-        </SocialIcons>
-
         <SocialIcons
           href="https://hh.ru/resume/92b2ea36ff09bd84230039ed1f6f644f304b39"
           target="_blank"

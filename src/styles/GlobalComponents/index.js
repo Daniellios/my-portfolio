@@ -11,6 +11,7 @@ export const Section = styled.section`
   position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
 
   @media ${(props) => props.theme.breakpoints.md} {
     padding: 0 2rem;
@@ -25,6 +26,15 @@ export const Section = styled.section`
   }
 `
 
+export const TopHello = styled.h3`
+  color: ${(props) => props.theme.colors.black};
+  padding-bottom: 1rem;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    text-align: left;
+  }
+`
+
 export const SectionTitle = styled.h2`
   font-weight: 800;
   font-size: ${(props) => (props.main ? "65px" : "56px")};
@@ -36,14 +46,14 @@ export const SectionTitle = styled.h2`
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 16px;
-  padding: ${(props) => (props.main ? "58px 0 16px" : "0")};
+  padding: ${(props) => (props.main ? "0 0 0" : "0")};
 
   @media ${(props) => props.theme.breakpoints.md} {
     font-size: ${(props) => (props.main ? "56px" : "48px")};
     line-height: ${(props) => (props.main ? "56px" : "48px")};
     margin-bottom: 12px;
     text-align: left;
-    padding: ${(props) => (props.main ? "40px 0 12px" : "0")};
+    padding: ${(props) => (props.main ? "0 0 0" : "0")};
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
@@ -90,20 +100,45 @@ export const SubSectionTitle = styled.h3`
   }
 `
 
+export const ListTitle = styled.h4`
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: 0.02em;
+  color: ${(props) => props.theme.colors.black};
+  margin-bottom: 8px;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
+  }
+`
+
 export const SectionText = styled.p`
   max-width: 800px;
   font-size: 24px;
   line-height: 40px;
   font-weight: 400;
-  padding-bottom: 3.6rem;
+  padding-bottom: ${(props) => (props.jobtitle ? "1rem" : "3.6rem")};
   text-align: left;
-  color: ${(props) => props.theme.colors.primary1};
+  color: ${(props) =>
+    props.jobtitle
+      ? props.theme.colors.palette.darkOrange
+      : props.theme.colors.primary1};
 
   @media ${(props) => props.theme.breakpoints.md} {
     max-width: 670px;
     font-size: 20px;
     line-height: 32px;
     padding-bottom: 24px;
+    text-align: center;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
@@ -293,6 +328,13 @@ export const ButtonFront = styled.button`
   @media ${(props) => props.theme.breakpoints.sm} {
     font-size: 14px;
   }
+`
+
+export const IconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${(props) => props.theme.colors.palette.lightOrange};
 `
 
 export const LinkContainer = styled.div`

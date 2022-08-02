@@ -24,14 +24,15 @@ export const HeroSection = styled.div`
 export const LeftSection = styled.div`
   display: flex;
   flex-direction: column;
+  padding-top: 2rem;
   width: 100%;
-
   text-align: left;
 
   @media ${(props) => props.theme.breakpoints.md} {
     width: 100%;
     display: flex;
-    padding: 0;
+
+    padding: 2rem 0 0 0;
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
@@ -42,7 +43,8 @@ export const LeftSection = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0;
+    padding: 2rem 0 0 0;
+
     align-items: center;
     margin: 0 auto;
   }

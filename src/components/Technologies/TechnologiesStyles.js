@@ -1,5 +1,7 @@
 import styled from "styled-components"
 
+import { AnimatePresence, motion } from "framer-motion"
+
 export const ImageContainer = styled.div`
   text-align: center;
   background-image: radial-gradient(
@@ -31,7 +33,7 @@ export const MainImage = styled.img`
   width: 100%;
 `
 
-export const List = styled.ul`
+export const List = styled(motion.ul)`
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -107,11 +109,11 @@ export const ListSkillLevel = styled.div`
   flex-direction: row;
 `
 
-export const ListItem = styled.li`
+export const ListItem = styled(motion.li)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   max-width: 320px;
   text-align: center;
   row-gap: 1.5rem;

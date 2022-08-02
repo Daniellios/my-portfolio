@@ -37,9 +37,9 @@ export const PortfolioDiv = styled.a`
 `
 
 export const MenuIconWrapper = styled(motion.div)`
-  position: ${(props) => (props.isInSidebar ? "absolute" : "unset")};
-  top: ${(props) => (props.isInSidebar ? "2rem" : "unset")};
-  right: ${(props) => (props.isInSidebar ? "2rem" : "unset")};
+  position: ${(props) => (props.isinsidebar ? "absolute" : "unset")};
+  top: ${(props) => (props.isinsidebar ? "2rem" : "unset")};
+  right: ${(props) => (props.isinsidebar ? "2rem" : "unset")};
   display: none;
   align-items: center;
   justify-content: center;

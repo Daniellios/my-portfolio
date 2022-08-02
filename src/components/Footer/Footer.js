@@ -13,6 +13,7 @@ import {
   Slogan,
   SocialContainer,
   SocialIconsContainer,
+  Contribution,
 } from "./FooterStyles"
 
 const Footer = () => {
@@ -53,6 +54,9 @@ const Footer = () => {
           </SocialIcons>
         </SocialContainer>
       </SocialIconsContainer>
+      <Contribution href="https://github.com/Daniellios/my-portfolio">
+        Designed & Built by Daniil Blinnikov
+      </Contribution>
     </FooterWrapper>
   )
 }

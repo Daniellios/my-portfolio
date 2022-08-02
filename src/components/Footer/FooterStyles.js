@@ -42,6 +42,19 @@ export const LinkItem = styled.a`
   }
 `
 
+export const Contribution = styled.a`
+  color: ${(props) => props.theme.colors.primary};
+  font-size: 18px;
+  line-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  &:hover {
+    color: ${(props) => props.theme.colors.hover};
+  }
+`
+
 export const SocialIconsContainer = styled.div`
   max-width: 1040px;
   display: flex;
@@ -56,12 +69,14 @@ export const SocialIconsContainer = styled.div`
     display: flex;
     width: 100%;
     flex-direction: column;
+    align-items: center;
   }
 `
 
 export const CompanyContainer = styled.div`
   display: flex;
   align-items: baseline;
+  justify-self: center;
   flex-wrap: wrap;
   margin-right: auto;
 
@@ -85,6 +100,8 @@ export const Slogan = styled.p`
   font-weight: 600;
   font-size: 26px;
   line-height: 30px;
+
+  text-align: left;
   padding: 1rem;
 
   @media ${(props) => props.theme.breakpoints.md} {
@@ -96,6 +113,7 @@ export const Slogan = styled.p`
     line-height: 22px;
     font-size: 18px;
     min-width: 100px;
+    text-align: center;
   }
 `
 
@@ -105,7 +123,7 @@ export const SocialContainer = styled.div`
 
   @media ${(props) => props.theme.breakpoints.md} {
     justify-content: center;
-    padding-right: 16px;
+
     flex-wrap: wrap;
   }
 `
@@ -143,7 +161,9 @@ export const LinkColumn = styled.div`
   flex-direction: column;
   max-width: 220px;
   width: 100%;
+  align-self: flex-end;
 `
+
 export const LinkTitle = styled.h4`
   font-style: normal;
   font-weight: 800;

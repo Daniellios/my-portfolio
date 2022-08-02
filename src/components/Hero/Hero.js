@@ -5,18 +5,20 @@ import {
   Section,
   SectionText,
   SectionTitle,
+  TopHello,
 } from "../../styles/GlobalComponents"
 import { LeftSection, RightSection, HeroSection } from "./HeroStyles"
 
 const Hero = () => (
   <Section>
     <LeftSection>
+      <TopHello>Hi, my name is</TopHello>
       <SectionTitle main center>
-        Hi <br />
-        My Portfolio
+        Daniil Blinnikov
       </SectionTitle>
       <SectionText>
-        My name is Daniil Blinnikov and I am a Front-end Developer
+        I am a Frontend Developer, I build web applications focusing on creating
+        great UI and UX
       </SectionText>
     </LeftSection>
   </Section>

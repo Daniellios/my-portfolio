@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import Footer from "../components/Footer/Footer"
 import Header from "../components/Header/Header"
 import { Container, ShadowOverlay, Main } from "./LayoutStyles"
@@ -7,14 +7,12 @@ import { AnimatePresence, motion } from "framer-motion"
 export const Layout = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  const bodyBlocker = () => {
+  useEffect(() => {
     const body = document.getElementsByTagName("body")
     isModalOpen
       ? (body[0].style.overflow = "hidden")
       : (body[0].style.overflow = "unset")
-  }
-
-  bodyBlocker()
+  }, [isModalOpen])
 
   return (
     <Container>
