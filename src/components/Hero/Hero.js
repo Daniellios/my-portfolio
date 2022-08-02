@@ -9,6 +9,7 @@ import {
 } from "../../styles/GlobalComponents"
 import { LeftSection, RightSection, HeroSection } from "./HeroStyles"
 
+//Test Change
 const Hero = () => (
   <Section>
     <LeftSection>
