@@ -1,5 +1,7 @@
 import styled from "styled-components"
 
+import { motion } from "framer-motion"
+
 export const ImgContainer = styled.div`
   position: relative;
   width: 100%;
@@ -17,20 +19,6 @@ export const Img = styled.img`
   border-radius: 10px 10px 0 0;
 `
 
-export const ImgShadow = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: background 0.4s ease-in-out;
-  border-radius: 10px 10px 0 0;
-  background: rgba(0, 0, 0, 0.51);
-  &:hover {
-    background: rgba(0, 0, 0, 0);
-  }
-`
-
 export const GridContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -46,19 +34,20 @@ export const GridContainer = styled.section`
     padding-bottom: 0;
   }
 `
-export const BlogCard = styled.div`
+export const BlogCard = styled(motion.div)`
   border-radius: 10px;
   text-align: center;
   width: 400px;
   padding-bottom: 1rem;
-  /* height: 520px; */
   background: ${(props) => props.theme.colors.background1};
   border: 1px solid black;
+  cursor: pointer;
+
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
   }
 `
-export const TitleContent = styled.div`
+export const TitleContent = styled(motion.div)`
   text-align: center;
   text-transform: uppercase;
   z-index: 20;

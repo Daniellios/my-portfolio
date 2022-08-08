@@ -37,7 +37,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: "#c0a0b9";
+    background: "#262323";
+    cursor: pointer;
   }
     
 

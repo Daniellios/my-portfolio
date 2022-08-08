@@ -2,11 +2,12 @@ export const projects = [
   {
     title: "Task Manager",
     description: "Task manager to keep track of things you need to do",
-    image: "/images/TaskManager.png",
+    images: ["/images/TaskManagerUI.png"],
     tags: [
       "JavaScript",
       "TypeScript",
       "React",
+      "Redux",
       "NextJS",
       "Tailwind",
       "Framer Motion",
@@ -19,7 +20,7 @@ export const projects = [
     title: "Hidden Object Game",
     description:
       "One of my projects on my previous position as a PixiJs developer",
-    image: "/images/Hidden.png",
+    images: ["/images/Hidden.png"],
     tags: ["JavaScript", "TypeScript", "React", "PixiJs", "HTML", "CSS"],
     source: null,
     visit:
@@ -30,7 +31,7 @@ export const projects = [
     title: "Mahjong Game",
     description:
       "This is a mahjong game I made. This is a real commercial project!",
-    image: "/images/Mahjong.png",
+    images: ["/images/Mahjong.png"],
     tags: ["JavaScript", "TypeScript", "React", "PixiJs", "HTML", "CSS"],
     source: null,
     visit:

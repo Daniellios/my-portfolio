@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react"
+import React from "react"
 import {
   BlogCard,
   CardInfo,
@@ -15,6 +15,7 @@ import {
 } from "./ProjectsStyles"
 import { Section, SectionTitle } from "../../styles/GlobalComponents"
 import { projects } from "../../constants/constants"
+import { motion } from "framer-motion"
 
 const Projects = () => {
   return (
@@ -22,44 +23,49 @@ const Projects = () => {
       <SectionTitle main>Projects</SectionTitle>
       <GridContainer>
         {projects.map(
-          ({ id, image, title, description, tags, source, visit }) => (
-            <BlogCard key={id}>
-              <ImgContainer>
-                <Img src={image} />
-              </ImgContainer>
+          ({ id, images, title, description, tags, source, visit }) => (
+            <a target="_blank" rel="noopener noreferrer" href={visit}>
+              <BlogCard key={id} as={motion.div} whileHover={{ scale: 1.01 }}>
+                <ImgContainer>
+                  {images.length > 1 ? (
+                    images.map((img) => <Img src={img} alt="project image" />)
+                  ) : (
+                    <Img src={images.at(0)} alt="project image" />
+                  )}
+                </ImgContainer>
+                <TitleContent>
+                  <HeaderThree title="true">{title}</HeaderThree>
+                </TitleContent>
+                <CardInfo>{description}</CardInfo>
+                <TagsContainer>
+                  <HeaderThree>Stack</HeaderThree>
+                  <TagList>
+                    {tags.map((tag, i) => (
+                      <Tag key={i}>{tag}</Tag>
+                    ))}
+                  </TagList>
+                </TagsContainer>
 
-              <TitleContent>
-                <HeaderThree title="true">{title}</HeaderThree>
-              </TitleContent>
-              <CardInfo>{description}</CardInfo>
-              <TagsContainer>
-                <HeaderThree>Stack</HeaderThree>
-                <TagList>
-                  {tags.map((tag, i) => (
-                    <Tag key={i}>{tag}</Tag>
-                  ))}
-                </TagList>
-              </TagsContainer>
-
-              <UtilityList>
-                {source && (
+                <UtilityList>
+                  {source && (
+                    <ExternalLinks
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={visit}
+                    >
+                      Code
+                    </ExternalLinks>
+                  )}
                   <ExternalLinks
                     target="_blank"
                     rel="noopener noreferrer"
                     href={visit}
                   >
-                    Code
+                    Source
                   </ExternalLinks>
-                )}
-                <ExternalLinks
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={visit}
-                >
-                  Source
-                </ExternalLinks>
-              </UtilityList>
-            </BlogCard>
+                </UtilityList>
+              </BlogCard>
+            </a>
           )
         )}
       </GridContainer>
