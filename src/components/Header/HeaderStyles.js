@@ -1,17 +1,25 @@
 import styled from "styled-components"
 import { motion } from "framer-motion"
 
-export const Container = styled.div`
-  /* position: fixed;
+export const Container = styled(motion.div)`
+  position: fixed;
+  top: 0;
+  left: 0;
   width: inherit;
-  max-width: inherit; */
+  max-width: 1980px;
   display: flex;
   align-items: center;
+  justify-self: center;
   justify-content: space-between;
-  background: ${(props) => props.theme.colors.background1};
+  background: ${(props) => props.theme.colors.fullblack};
   padding: 1rem 2rem 1rem 2rem;
   z-index: 10;
   padding-top: 2rem;
+
+  @media ${(props) => props.theme.breakpoints.large} {
+    position: absolute;
+    width: inherit;
+  }
 
   @media ${(props) => props.theme.breakpoints.sm} {
     justify-content: center;
@@ -40,6 +48,10 @@ export const MenuIconWrapper = styled(motion.div)`
   position: ${(props) => (props.isinsidebar ? "absolute" : "unset")};
   top: ${(props) => (props.isinsidebar ? "2rem" : "unset")};
   right: ${(props) => (props.isinsidebar ? "2rem" : "unset")};
+  color: ${(props) =>
+    props.isHeader
+      ? props.theme.colors.background1
+      : props.theme.colors.fullblack};
   display: none;
   align-items: center;
   justify-content: center;
@@ -80,7 +92,7 @@ export const NavLinksSidebar = styled(motion.div)`
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  background: ${(props) => props.theme.colors.background1};
+  background: ${(props) => props.theme.colors.fullblack};
 
   @media ${(props) => props.theme.breakpoints.xsm} {
     display: flex;
@@ -108,7 +120,7 @@ export const NavLink = styled.a`
   line-height: 32px;
   font-weight: 600;
   text-transform: capitalize;
-  color: ${(props) => props.theme.colors.black};
+  color: ${(props) => props.theme.colors.background1};
   transition: 0.4s ease;
   &:hover {
     color: ${(props) => props.theme.colors.hover};
@@ -127,9 +139,11 @@ export const CustomHH = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: ${(props) =>
+    props.isHeader ? props.theme.colors.black : props.theme.colors.background1};
   border-radius: 50%;
-  background: #262323;
+  background: ${(props) =>
+    props.isHeader ? props.theme.colors.background1 : props.theme.colors.black};
   &:hover {
     background: ${(props) => props.theme.colors.hover};
     transform: scale(1.01);
@@ -144,7 +158,9 @@ export const SocialIcons = styled.a`
   align-items: center;
   justify-content: center;
   transition: 0.3s ease;
-  color: ${(props) => props.theme.colors.black};
+
+  color: ${(props) =>
+    props.isHeader ? props.theme.colors.background1 : props.theme.colors.black};
   border-radius: 50px;
   padding: 8px;
   &:hover {

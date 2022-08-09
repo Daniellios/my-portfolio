@@ -19,7 +19,7 @@ export const ShadowOverlay = styled(motion.div)`
   z-index: 9;
   overflow-y: hidden;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
 `
 
 export const Main = styled.main``

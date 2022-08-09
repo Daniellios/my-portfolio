@@ -23,49 +23,56 @@ const Projects = () => {
       <SectionTitle main>Projects</SectionTitle>
       <GridContainer>
         {projects.map(
-          ({ id, images, title, description, tags, source, visit }) => (
-            <a target="_blank" rel="noopener noreferrer" href={visit}>
-              <BlogCard key={id} as={motion.div} whileHover={{ scale: 1.01 }}>
-                <ImgContainer>
-                  {images.length > 1 ? (
-                    images.map((img) => <Img src={img} alt="project image" />)
-                  ) : (
-                    <Img src={images.at(0)} alt="project image" />
-                  )}
-                </ImgContainer>
-                <TitleContent>
-                  <HeaderThree title="true">{title}</HeaderThree>
-                </TitleContent>
-                <CardInfo>{description}</CardInfo>
-                <TagsContainer>
-                  <HeaderThree>Stack</HeaderThree>
-                  <TagList>
-                    {tags.map((tag, i) => (
-                      <Tag key={i}>{tag}</Tag>
-                    ))}
-                  </TagList>
-                </TagsContainer>
+          ({ id, images, title, isGame, description, tags, source, visit }) => (
+            <BlogCard key={id} as={motion.div} whileHover={{ scale: 1.01 }}>
+              <ImgContainer>
+                {images.length > 1 ? (
+                  images.map((img) => <Img src={img} alt="project image" />)
+                ) : (
+                  <Img src={images.at(0)} alt="project image" />
+                )}
+              </ImgContainer>
+              <TitleContent>
+                <HeaderThree title="true">{title}</HeaderThree>
+              </TitleContent>
+              <CardInfo>{description}</CardInfo>
+              <TagsContainer>
+                <HeaderThree>Stack</HeaderThree>
+                <TagList>
+                  {tags.map((tag, i) => (
+                    <Tag key={i}>{tag}</Tag>
+                  ))}
+                </TagList>
+              </TagsContainer>
 
-                <UtilityList>
-                  {source && (
-                    <ExternalLinks
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={visit}
-                    >
-                      Code
-                    </ExternalLinks>
-                  )}
+              <UtilityList>
+                {source && (
                   <ExternalLinks
                     target="_blank"
                     rel="noopener noreferrer"
                     href={visit}
                   >
-                    Source
+                    Code
                   </ExternalLinks>
-                </UtilityList>
-              </BlogCard>
-            </a>
+                )}
+                {isGame ? (
+                  <ExternalLinks
+                    rel="noopener noreferrer"
+                    onClick={() => window.open(source, "_blank")}
+                  >
+                    Play!
+                  </ExternalLinks>
+                ) : (
+                  <ExternalLinks
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={visit}
+                  >
+                    Visit
+                  </ExternalLinks>
+                )}
+              </UtilityList>
+            </BlogCard>
           )
         )}
       </GridContainer>

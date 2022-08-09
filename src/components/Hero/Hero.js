@@ -10,7 +10,7 @@ import {
 import { LeftSection, RightSection, HeroSection } from "./HeroStyles"
 
 const Hero = () => (
-  <Section>
+  <Section isHero>
     <LeftSection>
       <TopHello>Hi, my name is</TopHello>
       <SectionTitle main center>

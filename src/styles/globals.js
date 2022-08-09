@@ -22,22 +22,23 @@ const GlobalStyles = createGlobalStyle`
     cursor: default;
 
     &::-webkit-scrollbar {
-    width: 8px;
+    width: 2px;
     height: 6px;
+    cursor: pointer;
   }
   &::-webkit-scrollbar-track {
     border-radius: 100vh;
-    background: transparent;
+    background: #262323;
   }
 
   &::-webkit-scrollbar-thumb {
     color: #e37e44;
-    background: #262323;
-    border: 3px solid #f6f7ed;
+    background:#262323;
+    border: 1px solid transparent;
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: "#262323";
+    background:  ${(props) => props.theme.colors.hover};
     cursor: pointer;
   }
     

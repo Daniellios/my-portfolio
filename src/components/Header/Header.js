@@ -1,24 +1,15 @@
 import Link from "next/link"
-import React, { useEffect, useRef, useState } from "react"
-import {
-  AiFillGithub,
-  AiFillSlackCircle,
-  AiFillLinkedin,
-  AiOutlineClose,
-} from "react-icons/ai"
+import React, { useEffect, useRef } from "react"
+import { AiFillGithub, AiOutlineClose } from "react-icons/ai"
 import { HeaderTitles } from "../../constants/constants"
 import { AnimatePresence, motion } from "framer-motion"
-
 import { GiHamburgerMenu } from "react-icons/gi"
-
 import {
   Container,
-  NavIconDiv,
   NavLinksDiv,
   NavSocialIconsDiv,
   NavLink,
   SocialIcons,
-  Span,
   CustomHH,
   MenuIconWrapper,
   NavLinksSidebar,
@@ -30,7 +21,6 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
 
   const buttonRef = useRef(null)
   const wrapperRef = useRef()
-
   const onResize = (e) => {
     if (e.currentTarget.innerWidth > 546) {
       setIsModalOpen(false)
@@ -47,7 +37,7 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
   useOnClickOutside(wrapperRef, () => setIsModalOpen(false))
 
   return (
-    <Container isSideBarOpen>
+    <Container as={motion.div}>
       {/* HEADER LINKS */}
       <NavLinksDiv>
         {HeaderTitles.map((item, index) => (
@@ -74,6 +64,7 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
             exit={{ opacity: 0, x: "440px" }}
           >
             <MenuIconWrapper
+              isHeader
               key={"closeWrap"}
               isinsidebar="true"
               as={motion.div}
@@ -82,8 +73,8 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
             >
               <AiOutlineClose size={"3rem"} />
             </MenuIconWrapper>
-            {HeaderTitles.map((item) => (
-              <li key={item} onClick={() => setIsModalOpen(false)}>
+            {HeaderTitles.map((item, index) => (
+              <li key={item + index} onClick={() => setIsModalOpen(false)}>
                 <Link href={item.link}>
                   <NavLink>{item.title}</NavLink>
                 </Link>
@@ -92,12 +83,18 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
           </NavLinksSidebar>
         )}
       </AnimatePresence>
-      <MenuIconWrapper key={"menuWrap"} as={motion.div} onClick={handleModal}>
+      <MenuIconWrapper
+        isHeader
+        key={"menuWrap"}
+        as={motion.div}
+        onClick={handleModal}
+      >
         <GiHamburgerMenu size={"3rem"} />
       </MenuIconWrapper>
 
       <NavSocialIconsDiv>
         <SocialIcons
+          isHeader
           href="https://github.com/Daniellios"
           target="_blank"
           rel="noopener noreferrer"
@@ -109,7 +106,7 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <CustomHH>hh</CustomHH>
+          <CustomHH isHeader>hh</CustomHH>
         </SocialIcons>
       </NavSocialIconsDiv>
     </Container>

@@ -13,6 +13,7 @@ export default {
     background2: "hsl(232.7,27.3%,23.7%)",
     hover: "#e37e44",
     black: "#262323",
+    fullblack: "rgba(0, 0, 0, 0.95)",
     darkorange: "#a24124",
     palette: {
       black: "#262323",
@@ -32,5 +33,6 @@ export default {
     md: "screen and (max-width: 768px)",
     lg: "screen and (max-width: 1024px)",
     xl: "screen and (max-width: 1280px)",
+    large: "screen and (min-width: 1980px)",
   },
 }

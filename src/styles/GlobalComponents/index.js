@@ -9,9 +9,8 @@ export const Section = styled.section`
   max-width: 1040px;
   box-sizing: content-box;
   position: relative;
-  overflow: hidden;
   grid-template-columns: 1fr 1fr;
-  margin-top: 2rem;
+  margin-top: ${(props) => (props.isHero ? "6rem" : "2rem")};
 
   @media ${(props) => props.theme.breakpoints.md} {
     padding: 0 2rem;
