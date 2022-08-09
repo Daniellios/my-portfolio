@@ -1,5 +1,5 @@
 import Link from "next/link"
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { AiFillGithub, AiOutlineClose } from "react-icons/ai"
 import { HeaderTitles } from "../../constants/constants"
 import { AnimatePresence, motion } from "framer-motion"
@@ -37,7 +37,14 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
   useOnClickOutside(wrapperRef, () => setIsModalOpen(false))
 
   return (
-    <Container as={motion.div}>
+    <Container
+      as={motion.div}
+      initial={{ y: -100 }}
+      animate={{
+        y: 0,
+      }}
+      transition={{ y: { duration: 0.2 } }}
+    >
       {/* HEADER LINKS */}
       <NavLinksDiv>
         {HeaderTitles.map((item, index) => (
