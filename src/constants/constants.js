@@ -34,7 +34,7 @@ export const projects = [
     description: "This is a mahjong game I made for G5 Entertainment.",
     images: ["/images/Mahjong.png"],
     tags: ["JavaScript", "TypeScript", "React", "PixiJs", "HTML", "CSS"],
-    source: "https://my-portfolio-blue-pi.vercel.app/htmls/MahjongGame.html",
+    source: "/my-portfolio-blue-pi.vercel.app/htmls/MahjongGame.html",
     visit:
       "https://drive.google.com/drive/folders/1AgifLkc0QmPan-ATlKTtLscLbLCB3586?usp=sharing",
     id: 1,

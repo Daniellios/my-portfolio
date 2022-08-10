@@ -8,11 +8,11 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/htmls/HiddenObjGame.html",
+        source: "/my-portfolio-blue-pi.vercel.app/htmls/HiddenObjGame.html",
         destination: "/htmls/HiddenObjGame.html",
       },
       {
-        source: "/htmls/MahjongGame.html",
+        source: "/my-portfolio-blue-pi.vercel.app/htmls/MahjongGame.html",
         destination: "/htmls/MahjongGame.html",
       },
     ]
