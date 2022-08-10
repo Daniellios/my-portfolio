@@ -60,7 +60,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     href={source}
                     target="_blank"
-                    // onClick={() => window.open(source, "_blank")}
+                    onClick={() => window.open(source, "_blank")}
                   >
                     Play!
                   </ExternalLinks>
