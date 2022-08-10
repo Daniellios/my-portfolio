@@ -58,7 +58,9 @@ const Projects = () => {
                 {isGame ? (
                   <ExternalLinks
                     rel="noopener noreferrer"
-                    onClick={() => window.open(source, "_blank")}
+                    href={source}
+                    target="_blank"
+                    // onClick={() => window.open(source, "_blank")}
                   >
                     Play!
                   </ExternalLinks>
