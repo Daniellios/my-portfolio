@@ -71,7 +71,7 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
             exit={{ opacity: 0, x: "440px" }}
           >
             <MenuIconWrapper
-              isHeader
+              isheader="true"
               key={"closeWrap"}
               isinsidebar="true"
               as={motion.div}
@@ -91,7 +91,7 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
         )}
       </AnimatePresence>
       <MenuIconWrapper
-        isHeader
+        isheader="true"
         key={"menuWrap"}
         as={motion.div}
         onClick={handleModal}
@@ -101,7 +101,7 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
 
       <NavSocialIconsDiv>
         <SocialIcons
-          isHeader
+          isheader="true"
           href="https://github.com/Daniellios"
           target="_blank"
           rel="noopener noreferrer"
@@ -113,7 +113,7 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <CustomHH isHeader>hh</CustomHH>
+          <CustomHH isheader="true">hh</CustomHH>
         </SocialIcons>
       </NavSocialIconsDiv>
     </Container>

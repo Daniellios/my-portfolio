@@ -49,7 +49,7 @@ export const MenuIconWrapper = styled(motion.div)`
   top: ${(props) => (props.isinsidebar ? "2rem" : "unset")};
   right: ${(props) => (props.isinsidebar ? "2rem" : "unset")};
   color: ${(props) =>
-    props.isHeader
+    props.isheader
       ? props.theme.colors.background1
       : props.theme.colors.fullblack};
   display: none;
@@ -140,10 +140,10 @@ export const CustomHH = styled.div`
   align-items: center;
   justify-content: center;
   color: ${(props) =>
-    props.isHeader ? props.theme.colors.black : props.theme.colors.background1};
+    props.isheader ? props.theme.colors.black : props.theme.colors.background1};
   border-radius: 50%;
   background: ${(props) =>
-    props.isHeader ? props.theme.colors.background1 : props.theme.colors.black};
+    props.isheader ? props.theme.colors.background1 : props.theme.colors.black};
   &:hover {
     background: ${(props) => props.theme.colors.hover};
     transform: scale(1.01);
@@ -160,7 +160,7 @@ export const SocialIcons = styled.a`
   transition: 0.3s ease;
 
   color: ${(props) =>
-    props.isHeader ? props.theme.colors.background1 : props.theme.colors.black};
+    props.isheader ? props.theme.colors.background1 : props.theme.colors.black};
   border-radius: 50px;
   padding: 8px;
   &:hover {
