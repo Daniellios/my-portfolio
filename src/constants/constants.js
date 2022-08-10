@@ -23,7 +23,7 @@ export const projects = [
       "One of my projects on my previous position as a PixiJs developer",
     images: ["/images/Hidden.png"],
     tags: ["JavaScript", "TypeScript", "React", "PixiJs", "HTML", "CSS"],
-    source: "https://my-portfolio-blue-pi.vercel.app/htmls/HiddenObjGame.html",
+    source: "/my-portfolio-blue-pi.vercel.app/htmls/HiddenObjGame.html",
     visit:
       "https://drive.google.com/drive/folders/1RgRW-RVp80i7Qs_fjVID8HbSXoIZPl48?usp=sharing",
     id: 0,
