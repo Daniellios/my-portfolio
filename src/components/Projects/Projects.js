@@ -50,7 +50,7 @@ const Projects = () => {
                   <ExternalLinks
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={visit}
+                    href={source}
                   >
                     Code
                   </ExternalLinks>
