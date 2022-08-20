@@ -9,7 +9,7 @@ const nextConfig = {
     return [
       {
         source: "/htmls/HiddenObjGame.html",
-        destination: "/pages/api/games.js",
+        destination: "/htmls/HiddenObjGame.html",
       },
       {
         source: "/my-portfolio-blue-pi.vercel.app/htmls/MahjongGame.html",
