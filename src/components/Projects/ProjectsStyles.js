@@ -11,14 +11,6 @@ export const ImgContainer = styled.div`
   border-radius: 10px 10px 0 0;
 `
 
-export const Img = styled.img`
-  width: 100%;
-  height: 100%;
-  max-height: 220px;
-  object-fit: fill;
-  border-radius: 10px 10px 0 0;
-`
-
 export const GridContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));

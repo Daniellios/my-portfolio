@@ -10,12 +10,12 @@ import {
   TagList,
   TitleContent,
   UtilityList,
-  Img,
   ImgContainer,
 } from "./ProjectsStyles"
 import { Section, SectionTitle } from "../../styles/GlobalComponents"
 import { projects } from "../../constants/constants"
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 const Projects = () => {
   return (
@@ -26,11 +26,13 @@ const Projects = () => {
           ({ id, images, title, isGame, description, tags, source, visit }) => (
             <BlogCard key={id} as={motion.div} whileHover={{ scale: 1.01 }}>
               <ImgContainer>
-                {images.length > 1 ? (
-                  images.map((img) => <Img src={img} alt="project image" />)
-                ) : (
-                  <Img src={images.at(0)} alt="project image" />
-                )}
+                <Image
+                  src={images.at(0)}
+                  alt="project image"
+                  width={432}
+                  height={220}
+                  style={{ borderRadius: " 10px 10px 0 0" }}
+                ></Image>
               </ImgContainer>
               <TitleContent>
                 <HeaderThree title="true">{title}</HeaderThree>
@@ -46,32 +48,40 @@ const Projects = () => {
               </TagsContainer>
 
               <UtilityList>
-                {source && (
-                  <ExternalLinks
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={source}
-                  >
-                    Code
-                  </ExternalLinks>
-                )}
                 {isGame ? (
-                  <ExternalLinks
-                    rel="noopener noreferrer"
-                    href={source}
-                    target="_blank"
-                    // onClick={() => window.open(source, "_blank")}
-                  >
-                    Play!
-                  </ExternalLinks>
+                  <>
+                    <ExternalLinks
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={visit}
+                    >
+                      Source
+                    </ExternalLinks>
+                    <ExternalLinks
+                      rel="noopener noreferrer"
+                      href={source}
+                      target="_blank"
+                    >
+                      Play!
+                    </ExternalLinks>
+                  </>
                 ) : (
-                  <ExternalLinks
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={visit}
-                  >
-                    Visit
-                  </ExternalLinks>
+                  <>
+                    <ExternalLinks
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={source}
+                    >
+                      Code
+                    </ExternalLinks>
+                    <ExternalLinks
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={visit}
+                    >
+                      Visit
+                    </ExternalLinks>
+                  </>
                 )}
               </UtilityList>
             </BlogCard>
