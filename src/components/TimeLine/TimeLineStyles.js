@@ -1,5 +1,24 @@
 import styled from "styled-components"
 
+import { AnimatePresence, motion } from "framer-motion"
+
+export const SliderContainer = styled(motion.div)`
+  cursor: grab;
+  overflow: hidden;
+  width: 100%;
+`
+
+export const InnerSliderContainer = styled(motion.div)`
+  display: flex;
+  pointer-events: all;
+`
+
+export const SliderItem = styled(motion.div)`
+  min-height: 10rem;
+  min-width: 33%;
+  padding: 20px;
+`
+
 export const CarouselContainer = styled.ul`
   max-width: 1040px;
   background: ${(props) => props.theme.colors.background1};

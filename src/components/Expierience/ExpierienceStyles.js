@@ -26,6 +26,7 @@ export const Job = styled.div`
 
 export const JobTasks = styled.ul`
   display: flex;
+  margin-top: 1rem;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;

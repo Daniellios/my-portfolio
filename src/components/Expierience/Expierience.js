@@ -5,6 +5,7 @@ import {
   SectionTitle,
   SectionText,
   ListTitle,
+  SectionDates,
   SectionSubText,
   IconWrapper,
 } from "../../styles/GlobalComponents"
@@ -21,7 +22,8 @@ const Expierience = () => {
         {Jobs.map((job, index) => (
           <Job key={index}>
             <ListTitle>{job.title}</ListTitle>
-            <SectionText jobtitle>at {job.company}</SectionText>
+            <SectionText jobtitle>@ {job.company}</SectionText>
+            <SectionDates jobtitle> {job.range}</SectionDates>
             <JobTasks>
               {job.tasks.map((task, index) => (
                 <JobTask key={index + task.charAt(index)}>

@@ -136,14 +136,39 @@ export const SectionText = styled.p`
     max-width: 670px;
     font-size: 20px;
     line-height: 32px;
-    padding-bottom: 24px;
+    padding-bottom: ${(props) => (props.jobtitle ? "0" : "24px")};
     text-align: center;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
     font-size: 16px;
     line-height: 24px;
-    padding-bottom: 16px;
+    padding-bottom: ${(props) => (props.jobtitle ? "0" : "1rem")};
+  }
+`
+
+export const SectionDates = styled.p`
+  max-width: 800px;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 400;
+  padding-bottom: 0;
+  text-align: left;
+  color: ${(props) =>
+    props.jobtitle
+      ? props.theme.colors.palette.darkOrange
+      : props.theme.colors.primary1};
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    max-width: 670px;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 16px;
+    line-height: 24px;
   }
 `
 
