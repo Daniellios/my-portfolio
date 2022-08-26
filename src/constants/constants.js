@@ -40,7 +40,7 @@ export const projects = [
       "One of my projects on my previous position as a PixiJs developer",
     images: ["/images/Hidden.png"],
     tags: ["JavaScript", "TypeScript", "React", "PixiJs", "HTML", "CSS"],
-    source: "/htmls/HiddenObjGame.html",
+    source: "https://daniellios.github.io/HO-test/",
     visit:
       "https://drive.google.com/drive/folders/1RgRW-RVp80i7Qs_fjVID8HbSXoIZPl48?usp=sharing",
     id: 0,
@@ -51,7 +51,7 @@ export const projects = [
     description: "This is a mahjong game I made for G5 Entertainment.",
     images: ["/images/Mahjong.png"],
     tags: ["JavaScript", "TypeScript", "React", "PixiJs", "HTML", "CSS"],
-    source: "/htmls/MahjongGame.html",
+    source: "https://daniellios.github.io/SM-game/",
     visit:
       "https://drive.google.com/drive/folders/1AgifLkc0QmPan-ATlKTtLscLbLCB3586?usp=sharing",
     id: 1,
