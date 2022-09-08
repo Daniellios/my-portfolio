@@ -1,8 +1,8 @@
 export const projects = [
   {
-    title: "React Admin Dashboard",
+    title: "Admin Dashboard",
     images: ["https://i.ibb.co/W6g39w3/image.png"],
-    description: "Admin Dashboard",
+    description: "Multi page and purpose Admin Dashboard",
     tags: ["React", "Tailwind", "Syncfusion"],
     source: "https://github.com/Daniellios/dashboard-main",
     visit: "https://dashboard-shoppy.netlify.app/",
