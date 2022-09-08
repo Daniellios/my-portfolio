@@ -27,7 +27,7 @@ const Projects = () => {
             <BlogCard key={id} as={motion.div} whileHover={{ scale: 1.01 }}>
               <ImgContainer>
                 <Image
-                  src={images.at(0)}
+                  src={images[0]}
                   alt="project image"
                   width={432}
                   height={220}

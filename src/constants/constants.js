@@ -1,5 +1,14 @@
 export const projects = [
   {
+    title: "React Admin Dashboard",
+    images: ["https://i.ibb.co/W6g39w3/image.png"],
+    description: "Admin Dashboard",
+    tags: ["React", "Tailwind", "Syncfusion"],
+    source: "https://github.com/Daniellios/dashboard-main",
+    visit: "https://dashboard-shoppy.netlify.app/",
+    id: 7,
+  },
+  {
     title: "Invoice App",
     description:
       "Store and manage the most important info about the rendered services in one place.",
