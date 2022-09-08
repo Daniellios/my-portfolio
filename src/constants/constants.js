@@ -5,7 +5,7 @@ export const projects = [
     description: "Multi page and purpose Admin Dashboard",
     tags: ["React", "Tailwind", "Syncfusion"],
     source: "https://github.com/Daniellios/dashboard-main",
-    visit: "https://dashboard-shoppy.netlify.app/",
+    visit: "https://effervescent-bonbon-b72539.netlify.app/",
     id: 7,
   },
   {
@@ -65,7 +65,7 @@ export const projects = [
       "https://drive.google.com/drive/folders/1AgifLkc0QmPan-ATlKTtLscLbLCB3586?usp=sharing",
     id: 1,
   },
-]
+];
 
 export const HeaderTitles = [
   {
@@ -88,7 +88,7 @@ export const HeaderTitles = [
     title: "Contacts",
     link: "#contacts",
   },
-]
+];
 
 export const Jobs = [
   {
@@ -112,7 +112,7 @@ export const Jobs = [
     ],
     range: "September - December 2021",
   },
-]
+];
 
 export const TimeLineData = [
   { year: 2016, text: "Entered Moscow Polytech University " },
@@ -123,9 +123,9 @@ export const TimeLineData = [
   { year: 2021, text: "Started learning Front-end development " },
   { year: 2021, text: "Got my first job in Front-end as a PixiJS developer" },
   { year: 2022, text: "Still honing and improving my skills" },
-]
+];
 
 export const Languages = [
   { code: "en", name: "English" },
   { code: "rus", name: "Русский" },
-]
+];
