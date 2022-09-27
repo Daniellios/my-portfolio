@@ -42,6 +42,7 @@ export const projects = [
     visit: "https://todo-app-hazel-six.vercel.app",
     id: 2,
   },
+
   {
     title: "Hidden Object Game",
     isGame: true,
@@ -53,6 +54,17 @@ export const projects = [
     visit:
       "https://drive.google.com/drive/folders/1RgRW-RVp80i7Qs_fjVID8HbSXoIZPl48?usp=sharing",
     id: 0,
+  },
+  {
+    title: "Yandex food ",
+    isGame: true,
+    description: "Playable ad for yandex-food",
+    images: ["/images/Ya-food.jpg"],
+    tags: ["JavaScript", "TypeScript", "React", "PixiJs", "HTML", "CSS"],
+    source: "https://daniellios.github.io/yndx-food/",
+    visit:
+      "https://drive.google.com/drive/folders/18X62PfO4a8kYyR3h6n5pTH0RqOKAz8S1?usp=sharing",
+    id: 11,
   },
   {
     title: "Mahjong Game",
