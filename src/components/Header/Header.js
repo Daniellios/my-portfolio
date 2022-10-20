@@ -1,9 +1,9 @@
-import Link from "next/link"
-import React, { useEffect, useRef, useState } from "react"
-import { AiFillGithub, AiOutlineClose } from "react-icons/ai"
-import { HeaderTitles } from "../../constants/constants"
-import { AnimatePresence, motion } from "framer-motion"
-import { GiHamburgerMenu } from "react-icons/gi"
+import Link from "next/link";
+import React, { useEffect, useRef, useState } from "react";
+import { AiFillGithub, AiOutlineClose } from "react-icons/ai";
+import { HeaderTitles } from "../../constants/constants";
+import { AnimatePresence, motion } from "framer-motion";
+import { GiHamburgerMenu } from "react-icons/gi";
 import {
   Container,
   NavLinksDiv,
@@ -13,28 +13,29 @@ import {
   CustomHH,
   MenuIconWrapper,
   NavLinksSidebar,
-} from "./HeaderStyles"
-import useOnClickOutside from "../../hooks/useOnClickOutside"
+  HeaderWrapper,
+} from "./HeaderStyles";
+import useOnClickOutside from "../../hooks/useOnClickOutside";
 
 const Header = ({ isModalOpen, setIsModalOpen }) => {
-  const handleModal = () => setIsModalOpen(!isModalOpen)
+  const handleModal = () => setIsModalOpen(!isModalOpen);
 
-  const buttonRef = useRef(null)
-  const wrapperRef = useRef()
+  const buttonRef = useRef(null);
+  const wrapperRef = useRef();
   const onResize = (e) => {
     if (e.currentTarget.innerWidth > 546) {
-      setIsModalOpen(false)
+      setIsModalOpen(false);
     }
-  }
+  };
 
   useEffect(() => {
-    window.addEventListener("resize", onResize)
+    window.addEventListener("resize", onResize);
     return () => {
-      window.removeEventListener("resize", onResize)
-    }
-  }, [])
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
 
-  useOnClickOutside(wrapperRef, () => setIsModalOpen(false))
+  useOnClickOutside(wrapperRef, () => setIsModalOpen(false));
 
   return (
     <Container
@@ -45,79 +46,81 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
       }}
       transition={{ y: { duration: 0.2 } }}
     >
-      {/* HEADER LINKS */}
-      <NavLinksDiv>
-        {HeaderTitles.map((item, index) => (
-          <li key={item + index}>
-            <Link href={item.link}>
-              <NavLink>{item.title}</NavLink>
-            </Link>
-          </li>
-        ))}
-      </NavLinksDiv>
-      <AnimatePresence>
-        {isModalOpen && (
-          <NavLinksSidebar
-            ref={wrapperRef}
-            as={motion.div}
-            initial={
-              isModalOpen ? { x: "440px", opacity: 0 } : { opacity: 1, x: 0 }
-            }
-            animate={
-              isModalOpen
-                ? { x: 0, opacity: 1, transition: "easing" }
-                : { opacity: 0, x: "440px", transition: "easing" }
-            }
-            exit={{ opacity: 0, x: "440px" }}
-          >
-            <MenuIconWrapper
-              isheader="true"
-              key={"closeWrap"}
-              isinsidebar="true"
+      <HeaderWrapper>
+        {/* HEADER LINKS */}
+        <NavLinksDiv>
+          {HeaderTitles.map((item, index) => (
+            <li key={item + index}>
+              <Link href={item.link}>
+                <NavLink>{item.title}</NavLink>
+              </Link>
+            </li>
+          ))}
+        </NavLinksDiv>
+        <AnimatePresence>
+          {isModalOpen && (
+            <NavLinksSidebar
+              ref={wrapperRef}
               as={motion.div}
-              onClick={handleModal}
-              ref={buttonRef}
+              initial={
+                isModalOpen ? { x: "440px", opacity: 0 } : { opacity: 1, x: 0 }
+              }
+              animate={
+                isModalOpen
+                  ? { x: 0, opacity: 1, transition: "easing" }
+                  : { opacity: 0, x: "440px", transition: "easing" }
+              }
+              exit={{ opacity: 0, x: "440px" }}
             >
-              <AiOutlineClose size={"3rem"} />
-            </MenuIconWrapper>
-            {HeaderTitles.map((item, index) => (
-              <li key={item + index} onClick={() => setIsModalOpen(false)}>
-                <Link href={item.link}>
-                  <NavLink>{item.title}</NavLink>
-                </Link>
-              </li>
-            ))}
-          </NavLinksSidebar>
-        )}
-      </AnimatePresence>
-      <MenuIconWrapper
-        isheader="true"
-        key={"menuWrap"}
-        as={motion.div}
-        onClick={handleModal}
-      >
-        <GiHamburgerMenu size={"3rem"} />
-      </MenuIconWrapper>
-
-      <NavSocialIconsDiv>
-        <SocialIcons
+              <MenuIconWrapper
+                isheader="true"
+                key={"closeWrap"}
+                isinsidebar="true"
+                as={motion.div}
+                onClick={handleModal}
+                ref={buttonRef}
+              >
+                <AiOutlineClose size={"3rem"} />
+              </MenuIconWrapper>
+              {HeaderTitles.map((item, index) => (
+                <li key={item + index} onClick={() => setIsModalOpen(false)}>
+                  <Link href={item.link}>
+                    <NavLink>{item.title}</NavLink>
+                  </Link>
+                </li>
+              ))}
+            </NavLinksSidebar>
+          )}
+        </AnimatePresence>
+        <MenuIconWrapper
           isheader="true"
-          href="https://github.com/Daniellios"
-          target="_blank"
-          rel="noopener noreferrer"
+          key={"menuWrap"}
+          as={motion.div}
+          onClick={handleModal}
         >
-          <AiFillGithub size="3rem" />
-        </SocialIcons>
-        <SocialIcons
-          href="https://hh.ru/resume/92b2ea36ff09bd84230039ed1f6f644f304b39"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <CustomHH isheader="true">hh</CustomHH>
-        </SocialIcons>
-      </NavSocialIconsDiv>
-    </Container>
-  )
-}
+          <GiHamburgerMenu size={"3rem"} />
+        </MenuIconWrapper>
 
-export default Header
+        <NavSocialIconsDiv>
+          <SocialIcons
+            isheader="true"
+            href="https://github.com/Daniellios"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AiFillGithub size="3rem" />
+          </SocialIcons>
+          <SocialIcons
+            href="https://hh.ru/resume/92b2ea36ff09bd84230039ed1f6f644f304b39"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CustomHH isheader="true">hh</CustomHH>
+          </SocialIcons>
+        </NavSocialIconsDiv>
+      </HeaderWrapper>
+    </Container>
+  );
+};
+
+export default Header;

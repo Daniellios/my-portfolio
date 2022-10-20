@@ -1,16 +1,16 @@
-import styled from "styled-components"
-import { motion } from "framer-motion"
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Container = styled(motion.div)`
   position: fixed;
   top: 0;
   left: 0;
   width: inherit;
-  max-width: 1980px;
+
   display: flex;
   align-items: center;
   justify-self: center;
-  justify-content: space-between;
+  justify-content: center;
   background: ${(props) => props.theme.colors.fullblack};
   padding: 1rem 2rem 1rem 2rem;
   z-index: 10;
@@ -27,13 +27,25 @@ export const Container = styled(motion.div)`
   @media ${(props) => props.theme.breakpoints.xsm} {
     justify-content: flex-end;
   }
-`
+`;
+
+export const HeaderWrapper = styled.div`
+  width: 100%;
+  max-width: 1980px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media ${(props) => props.theme.breakpoints.xsm} {
+    justify-content: flex-end;
+  }
+`;
 
 export const Span = styled.span`
   font-size: 2rem;
   font-weight: 600;
   color: ${(props) => props.theme.colors.black};
-`
+`;
 
 export const PortfolioDiv = styled.a`
   display: flex;
@@ -42,7 +54,7 @@ export const PortfolioDiv = styled.a`
   column-gap: 1rem;
   color: ${(props) => props.theme.colors.black};
   margin-bottom: 20px;
-`
+`;
 
 export const MenuIconWrapper = styled(motion.div)`
   position: ${(props) => (props.isinsidebar ? "absolute" : "unset")};
@@ -66,7 +78,7 @@ export const MenuIconWrapper = styled(motion.div)`
     display: flex;
     justify-self: center;
   }
-`
+`;
 
 export const NavLinksDiv = styled.div`
   display: flex;
@@ -77,7 +89,7 @@ export const NavLinksDiv = styled.div`
   @media ${(props) => props.theme.breakpoints.xsm} {
     display: none;
   }
-`
+`;
 
 export const NavLinksSidebar = styled(motion.div)`
   display: none;
@@ -97,7 +109,7 @@ export const NavLinksSidebar = styled(motion.div)`
   @media ${(props) => props.theme.breakpoints.xsm} {
     display: flex;
   }
-`
+`;
 
 export const NavSocialIconsDiv = styled.div`
   display: flex;
@@ -112,7 +124,7 @@ export const NavSocialIconsDiv = styled.div`
   @media ${(props) => props.theme.breakpoints.sm} {
     display: none;
   }
-`
+`;
 
 // Navigation Links
 export const NavLink = styled.a`
@@ -130,7 +142,7 @@ export const NavLink = styled.a`
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 0.5rem;
   }
-`
+`;
 
 export const CustomHH = styled.div`
   transition: 0.3s ease;
@@ -149,7 +161,7 @@ export const CustomHH = styled.div`
     transform: scale(1.01);
     cursor: pointer;
   }
-`
+`;
 
 // Social Icons
 
@@ -168,4 +180,4 @@ export const SocialIcons = styled.a`
     transform: scale(1.2);
     cursor: pointer;
   }
-`
+`;

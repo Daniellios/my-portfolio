@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const Section = styled.section`
   display: ${(props) => (props.grid ? "grid" : "flex")};
@@ -6,7 +6,7 @@ export const Section = styled.section`
   padding: ${(props) => (props.nopadding ? "0" : "32px 24px 0")};
   gap: 2rem;
   margin: 0 auto;
-  max-width: 1040px;
+  max-width: 1440px;
   box-sizing: content-box;
   position: relative;
   grid-template-columns: 1fr 1fr;
@@ -23,7 +23,7 @@ export const Section = styled.section`
     width: calc(100vw - 32px);
     flex-direction: column;
   }
-`
+`;
 
 export const TopHello = styled.h3`
   color: ${(props) => props.theme.colors.black};
@@ -32,7 +32,7 @@ export const TopHello = styled.h3`
   @media ${(props) => props.theme.breakpoints.md} {
     text-align: left;
   }
-`
+`;
 
 export const SectionTitle = styled.h2`
   font-weight: 800;
@@ -64,7 +64,7 @@ export const SectionTitle = styled.h2`
     padding: ${(props) => (props.main ? "16px 0 8px" : "0")};
     max-width: 100%;
   }
-`
+`;
 
 export const SubSectionTitle = styled.h3`
   font-weight: 600;
@@ -97,7 +97,7 @@ export const SubSectionTitle = styled.h3`
     padding: ${(props) => (props.main ? "16px 0 8px" : "0")};
     max-width: 100%;
   }
-`
+`;
 
 export const ListTitle = styled.h4`
   font-weight: 700;
@@ -118,7 +118,7 @@ export const ListTitle = styled.h4`
     letter-spacing: 0.02em;
     margin-bottom: 4px;
   }
-`
+`;
 
 export const SectionText = styled.p`
   max-width: 800px;
@@ -145,7 +145,7 @@ export const SectionText = styled.p`
     line-height: 24px;
     padding-bottom: ${(props) => (props.jobtitle ? "0" : "1rem")};
   }
-`
+`;
 
 export const SectionDates = styled.p`
   max-width: 800px;
@@ -170,7 +170,7 @@ export const SectionDates = styled.p`
     font-size: 16px;
     line-height: 24px;
   }
-`
+`;
 
 export const SectionDivider = styled.div`
   width: 64px;
@@ -193,7 +193,7 @@ export const SectionDivider = styled.div`
     width: 32px;
     height: 2px;
   }
-`
+`;
 export const SectionSubText = styled.p`
   max-width: 800px;
   font-weight: 300;
@@ -211,7 +211,7 @@ export const SectionSubText = styled.p`
     font-size: 14px;
     line-height: 22px;
   }
-`
+`;
 export const SecondaryBtn = styled.button`
   color: #fff;
   background: none;
@@ -261,7 +261,7 @@ export const SecondaryBtn = styled.button`
     font-size: 14px;
     line-height: 16px;
   }
-`
+`;
 
 export const ButtonBack = styled.div`
   width: ${({ alt }) => (alt ? "150px" : "262px")};
@@ -298,7 +298,7 @@ export const ButtonBack = styled.div`
     font-size: 14px;
     margin-bottom: ${({ alt }) => (alt ? "0" : "32px")};
   }
-`
+`;
 
 export const ButtonFront = styled.button`
   border: transparent;
@@ -352,14 +352,14 @@ export const ButtonFront = styled.button`
   @media ${(props) => props.theme.breakpoints.sm} {
     font-size: 14px;
   }
-`
+`;
 
 export const IconWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   color: ${(props) => props.theme.colors.palette.lightOrange};
-`
+`;
 
 export const LinkContainer = styled.div`
   margin-left: ${({ large }) => (large ? "24px" : "16px")};
@@ -380,7 +380,7 @@ export const LinkContainer = styled.div`
   @media ${(props) => props.theme.breakpoints.sm} {
     margin-left: ${({ large }) => (large ? "0" : "8px")};
   }
-`
+`;
 
 export const LinkIconImg = styled.div`
   display: flex;
@@ -393,4 +393,4 @@ export const LinkIconImg = styled.div`
   @media ${(props) => props.theme.breakpoints.sm} {
     height: ${({ large }) => (large ? "32px" : "16px")};
   }
-`
+`;

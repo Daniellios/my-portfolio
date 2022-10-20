@@ -1,8 +1,8 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const FooterWrapper = styled.section`
   width: calc(100vw - 96px);
-  max-width: 1040px;
+  max-width: 1440px;
   padding: 2rem 48px 40px;
   margin: 1rem auto;
   box-sizing: content-box;
@@ -11,7 +11,7 @@ export const FooterWrapper = styled.section`
     padding: 0 16px 48px;
     width: calc(100vw - 32px);
   }
-`
+`;
 
 export const LinkItem = styled.a`
   font-size: 18px;
@@ -40,7 +40,7 @@ export const LinkItem = styled.a`
     display: flex;
     align-items: center;
   }
-`
+`;
 
 export const Contribution = styled.a`
   color: ${(props) => props.theme.colors.primary};
@@ -53,10 +53,10 @@ export const Contribution = styled.a`
   &:hover {
     color: ${(props) => props.theme.colors.hover};
   }
-`
+`;
 
 export const SocialIconsContainer = styled.div`
-  max-width: 1040px;
+  max-width: 1440px;
   display: flex;
   justify-content: space-between;
 
@@ -71,7 +71,7 @@ export const SocialIconsContainer = styled.div`
     flex-direction: column;
     align-items: center;
   }
-`
+`;
 
 export const CompanyContainer = styled.div`
   display: flex;
@@ -91,7 +91,7 @@ export const CompanyContainer = styled.div`
     margin: 0 0 32px;
     align-items: center;
   }
-`
+`;
 
 export const Slogan = styled.p`
   color: ${(props) => props.theme.colors.primary};
@@ -115,7 +115,7 @@ export const Slogan = styled.p`
     min-width: 100px;
     text-align: center;
   }
-`
+`;
 
 export const SocialContainer = styled.div`
   display: flex;
@@ -123,10 +123,9 @@ export const SocialContainer = styled.div`
 
   @media ${(props) => props.theme.breakpoints.md} {
     justify-content: center;
-
     flex-wrap: wrap;
   }
-`
+`;
 
 export const LinkList = styled.ul`
   border-top: 1px solid ${(props) => props.theme.colors.primary};
@@ -154,7 +153,7 @@ export const LinkList = styled.ul`
     padding: 32px 4px 16px;
     gap: 5px;
   }
-`
+`;
 
 export const LinkColumn = styled.div`
   display: flex;
@@ -162,7 +161,7 @@ export const LinkColumn = styled.div`
   max-width: 220px;
   width: 100%;
   align-self: flex-end;
-`
+`;
 
 export const LinkTitle = styled.h4`
   font-style: normal;
@@ -178,4 +177,4 @@ export const LinkTitle = styled.h4`
     line-height: 12px;
     margin-bottom: 8px;
   }
-`
+`;
