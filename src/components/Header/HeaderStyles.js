@@ -66,6 +66,8 @@ export const MenuIconWrapper = styled(motion.div)`
       : props.theme.colors.fullblack};
   display: none;
   align-items: center;
+  width: 28px;
+  height: 28px;
   justify-content: center;
   transition: all 0.2s ease-in-out;
 
@@ -128,7 +130,7 @@ export const NavSocialIconsDiv = styled.div`
 
 // Navigation Links
 export const NavLink = styled.a`
-  font-size: 2rem;
+  font-size: 1rem;
   line-height: 32px;
   font-weight: 600;
   text-transform: capitalize;

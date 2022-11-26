@@ -1,27 +1,27 @@
-import React from "react"
-import Image from "next/image"
+import React from "react";
+import Image from "next/image";
 
 import {
   Section,
   SectionText,
-  SectionTitle,
+  MainHeader,
   TopHello,
-} from "../../styles/GlobalComponents"
-import { LeftSection, RightSection, HeroSection } from "./HeroStyles"
+} from "../../styles/GlobalComponents";
+import { LeftSection, RightSection, HeroSection } from "./HeroStyles";
 
 const Hero = () => (
   <Section isHero>
     <LeftSection>
       <TopHello>Hi, my name is</TopHello>
-      <SectionTitle main center>
+      <MainHeader main center>
         Daniil Blinnikov
-      </SectionTitle>
+      </MainHeader>
       <SectionText>
         I am a Frontend Developer, I build web applications focusing on creating
         great UI and UX
       </SectionText>
     </LeftSection>
   </Section>
-)
+);
 
-export default Hero
+export default Hero;

@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components"
-import { normalize } from "styled-normalize"
+import { createGlobalStyle } from "styled-components";
+import { normalize } from "styled-normalize";
 const GlobalStyles = createGlobalStyle`
 
   ${normalize};
@@ -10,13 +10,11 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
   html {
-    font-size: 62.5%;
     scroll-behavior: smooth;
-
   }
   body {
     font-family: ${(props) => props.theme.fonts.main};
-    font-size: 1.6rem;
+    font-size: 1em;
     background-color:  ${(props) => props.theme.colors.background1};
     color: ${(props) => props.theme.colors.black};
     cursor: default;
@@ -48,14 +46,38 @@ const GlobalStyles = createGlobalStyle`
     font-family: ${(props) => props.theme.fonts.title};
     color: ${(props) => props.theme.colors.primary1};
   }
+
+
+  h1{
+    font-size: 3em;
+    line-height: 1.05em;
+  }
+
+  h2{
+    font-size: 2.25em;
+    line-height: 1.25em;
+  }
+
+  h3{
+    font-size: 1.75em;
+    line-height: 1.25em;
+  }
+
+  h4{
+    font-size: 1.125em;
+    line-height: 1.22em;
+  }
+
+
   a {
     text-decoration: none;
     color: ${(props) => props.theme.colors.primary1};
   }
+  
   li{
     list-style: none;
   }
 
-`
+`;
 
-export default GlobalStyles
+export default GlobalStyles;

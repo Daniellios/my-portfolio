@@ -26,6 +26,9 @@ export default {
       heavyDarkGray: "#53585a",
     },
   },
+  sizes: {
+    border: "10px",
+  },
   // Breakpoints for responsive design
   breakpoints: {
     xsm: "screen and (max-width: 545px)",
@@ -35,4 +38,4 @@ export default {
     xl: "screen and (max-width: 1280px)",
     large: "screen and (min-width: 1980px)",
   },
-}
+};

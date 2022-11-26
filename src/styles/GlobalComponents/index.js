@@ -4,7 +4,6 @@ export const Section = styled.section`
   display: ${(props) => (props.grid ? "grid" : "flex")};
   flex-direction: ${(props) => (props.row ? "row" : "column")};
   padding: ${(props) => (props.nopadding ? "0" : "32px 24px 0")};
-  gap: 2rem;
   margin: 0 auto;
   max-width: 1440px;
   box-sizing: content-box;
@@ -26,8 +25,17 @@ export const Section = styled.section`
 `;
 
 export const TopHello = styled.h3`
-  color: ${(props) => props.theme.colors.black};
   padding-bottom: 1rem;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    text-align: left;
+  }
+`;
+
+export const MainHeader = styled.h1`
+  font-weight: 800;
+  text-align: left;
+  color: ${(props) => props.theme.colors.black};
 
   @media ${(props) => props.theme.breakpoints.md} {
     text-align: left;
@@ -36,8 +44,6 @@ export const TopHello = styled.h3`
 
 export const SectionTitle = styled.h2`
   font-weight: 800;
-  font-size: ${(props) => (props.main ? "65px" : "56px")};
-  line-height: ${(props) => (props.main ? "72px" : "56px")};
   width: max-content;
   max-width: 100%;
   background: ${(props) => props.theme.colors.black};
@@ -58,8 +64,6 @@ export const SectionTitle = styled.h2`
   @media ${(props) => props.theme.breakpoints.sm} {
     font-size: 32px;
     line-height: 40px;
-    font-size: ${(props) => (props.main ? "40px" : "32px")};
-    line-height: ${(props) => (props.main ? "40px" : "40px")};
     margin-bottom: 8px;
     padding: ${(props) => (props.main ? "16px 0 8px" : "0")};
     max-width: 100%;
@@ -137,12 +141,13 @@ export const SectionText = styled.p`
     font-size: 20px;
     line-height: 32px;
     padding-bottom: ${(props) => (props.jobtitle ? "0" : "24px")};
-    text-align: center;
+    text-align: left;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
     font-size: 16px;
     line-height: 24px;
+    text-align: center;
     padding-bottom: ${(props) => (props.jobtitle ? "0" : "1rem")};
   }
 `;

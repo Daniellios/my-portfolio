@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 export const ImgContainer = styled.div`
   position: relative;
@@ -9,53 +9,54 @@ export const ImgContainer = styled.div`
   max-height: 220px;
   object-fit: fill;
   border-radius: 10px 10px 0 0;
-`
+`;
 
 export const GridContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  padding: 3rem;
+  padding: 2rem;
   place-items: center;
   align-items: flex-start;
   column-gap: 2rem;
   row-gap: 3rem;
+
   @media ${(props) => props.theme.breakpoints.sm} {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
     padding-bottom: 0;
+    padding: 1rem;
   }
-`
+`;
 export const BlogCard = styled(motion.div)`
-  border-radius: 10px;
+  border-radius: ${(props) => props.theme.sizes.border};
   text-align: center;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
   width: 400px;
   padding-bottom: 1rem;
   background: ${(props) => props.theme.colors.background1};
   border: 1px solid black;
   cursor: pointer;
+  flex-basis: 100%;
 
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
+    max-width: 400px;
   }
-`
+`;
 export const TitleContent = styled(motion.div)`
-  text-align: center;
   text-transform: uppercase;
-  z-index: 20;
   width: 100%;
   color: ${(props) => props.theme.colors.black};
   font-weight: 600;
-  padding: 10px 0;
-`
+`;
 
 export const HeaderThree = styled.h3`
   font-weight: 500;
   letter-spacing: 2px;
   color: ${(props) => props.theme.colors.black};
-  padding: 0.5rem 0;
-  font-size: ${(props) => (props.title ? "3rem" : "2rem")};
-`
+`;
 
 export const Hr = styled.hr`
   width: 50px;
@@ -63,7 +64,7 @@ export const Hr = styled.hr`
   margin: 20px auto;
   border: 0;
   background: #a24124;
-`
+`;
 
 export const Intro = styled.div`
   width: 170px;
@@ -73,7 +74,7 @@ export const Intro = styled.div`
   font-size: 13px;
   font-style: italic;
   line-height: 18px;
-`
+`;
 
 export const CardInfo = styled.p`
   width: 100%;
@@ -85,42 +86,42 @@ export const CardInfo = styled.p`
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 0.3rem;
   }
-`
+`;
 
 export const UtilityList = styled.ul`
   list-style-type: none;
   padding: 0;
   display: flex;
   justify-content: space-around;
-  margin: 2rem 0 0 0;
-  padding-top: 2rem;
-`
+`;
 
 export const ExternalLinks = styled.a`
   color: ${(props) => props.theme.colors.black};
-  font-size: 1.6rem;
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
   background: #c0c8ca;
-  border-radius: 15px;
+  border-radius: ${(props) => props.theme.sizes.border};
   transition: 0.5s;
   &:hover {
     background: ${(props) => props.theme.colors.hover};
   }
-`
 
-export const TagsContainer = styled.div`
-  margin-top: 2rem;
-`
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: 0.6rem 1rem;
+  }
+`;
+
+export const TagsContainer = styled.div``;
 
 export const TagList = styled.ul`
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   gap: 1rem;
   padding: 2rem 2rem 0 2rem;
-`
+`;
+
 export const Tag = styled.li`
   color: ${(props) => props.theme.colors.black};
-  font-size: 1.5rem;
-`
+`;

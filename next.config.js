@@ -1,4 +1,4 @@
-const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
+const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 
 /**
  * @type {import('next').NextConfig}
@@ -15,11 +15,16 @@ const nextConfig = {
         source: "/my-portfolio-blue-pi.vercel.app/htmls/MahjongGame.html",
         destination: "/htmls/MahjongGame.html",
       },
-    ]
+    ];
   },
   images: {
     domains: ["i.ibb.co"],
   },
-}
 
-module.exports = nextConfig
+  i18n: {
+    locales: ["ru-Ru", "en-US"],
+    defaultLocale: "ru-Ru",
+  },
+};
+
+module.exports = nextConfig;
