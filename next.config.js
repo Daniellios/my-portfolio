@@ -21,10 +21,10 @@ const nextConfig = {
     domains: ["i.ibb.co"],
   },
 
-  i18n: {
-    locales: ["ru-Ru", "en-US"],
-    defaultLocale: "ru-Ru",
-  },
+  // i18n: {
+  //   locales: ["ru-Ru", "en-US"],
+  //   defaultLocale: "ru-Ru",
+  // },
 };
 
 module.exports = nextConfig;
