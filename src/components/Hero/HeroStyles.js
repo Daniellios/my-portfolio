@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const HeroSection = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ export const HeroSection = styled.div`
     width: calc(100vw - 32px);
     flex-direction: column;
   }
-`
+`;
 
 export const LeftSection = styled.div`
   display: flex;
@@ -48,7 +48,7 @@ export const LeftSection = styled.div`
     align-items: center;
     margin: 0 auto;
   }
-`
+`;
 
 export const RightSection = styled.div`
   display: flex;
@@ -58,4 +58,4 @@ export const RightSection = styled.div`
   width: 50%;
   height: 100%;
   border-radius: 50%;
-`
+`;

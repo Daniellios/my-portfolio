@@ -98,7 +98,7 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
           as={motion.div}
           onClick={handleModal}
         >
-          <GiHamburgerMenu size={"3rem"} />
+          <GiHamburgerMenu size={"2.5rem"} />
         </MenuIconWrapper>
 
         <NavSocialIconsDiv>
@@ -108,7 +108,7 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <AiFillGithub size="3rem" />
+            <AiFillGithub size="2rem" />
           </SocialIcons>
           <SocialIcons
             href="https://hh.ru/resume/92b2ea36ff09bd84230039ed1f6f644f304b39"

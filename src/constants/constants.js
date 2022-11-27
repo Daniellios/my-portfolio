@@ -93,10 +93,6 @@ export const HeaderTitles = [
     link: "#experience",
   },
   {
-    title: "About",
-    link: "#about",
-  },
-  {
     title: "Contacts",
     link: "#contacts",
   },

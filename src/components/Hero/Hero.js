@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 import {
   Section,
@@ -7,7 +6,7 @@ import {
   MainHeader,
   TopHello,
 } from "../../styles/GlobalComponents";
-import { LeftSection, RightSection, HeroSection } from "./HeroStyles";
+import { LeftSection } from "./HeroStyles";
 
 const Hero = () => (
   <Section isHero>

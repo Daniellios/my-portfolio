@@ -148,16 +148,14 @@ export const NavLink = styled.a`
 
 export const CustomHH = styled.div`
   transition: 0.3s ease;
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${(props) =>
-    props.isheader ? props.theme.colors.black : props.theme.colors.background1};
+  color: ${(props) => props.theme.colors.black};
   border-radius: 50%;
-  background: ${(props) =>
-    props.isheader ? props.theme.colors.background1 : props.theme.colors.black};
+  background: ${(props) => props.theme.colors.background1};
   &:hover {
     background: ${(props) => props.theme.colors.hover};
     transform: scale(1.01);
@@ -173,10 +171,9 @@ export const SocialIcons = styled.a`
   justify-content: center;
   transition: 0.3s ease;
 
-  color: ${(props) =>
-    props.isheader ? props.theme.colors.background1 : props.theme.colors.black};
+  color: ${(props) => props.theme.colors.background1};
   border-radius: 50px;
-  padding: 8px;
+  padding: 4px;
   &:hover {
     color: ${(props) => props.theme.colors.hover};
     transform: scale(1.2);

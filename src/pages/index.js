@@ -1,9 +1,8 @@
-import Expierience from "../components/Expierience/Expierience"
-import Hero from "../components/Hero/Hero"
-import Projects from "../components/Projects/Projects"
-import Technologies from "../components/Technologies/Technologies"
-import Timeline from "../components/TimeLine/TimeLine"
-import { Layout } from "../layout/Layout"
+import Expierience from "../components/Expierience/Expierience";
+import Hero from "../components/Hero/Hero";
+import Projects from "../components/Projects/Projects";
+import Technologies from "../components/Technologies/Technologies";
+import { Layout } from "../layout/Layout";
 
 const Home = () => {
   return (
@@ -12,9 +11,8 @@ const Home = () => {
       <Projects />
       <Technologies />
       <Expierience />
-      <Timeline />
     </Layout>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
