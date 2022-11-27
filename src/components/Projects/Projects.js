@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import {
   BlogCard,
   CardInfo,
@@ -9,13 +9,14 @@ import {
   Tag,
   TagList,
   TitleContent,
+  Hr,
   UtilityList,
   ImgContainer,
-} from "./ProjectsStyles"
-import { Section, SectionTitle } from "../../styles/GlobalComponents"
-import { projects } from "../../constants/constants"
-import { motion } from "framer-motion"
-import Image from "next/image"
+} from "./ProjectsStyles";
+import { Section, SectionTitle } from "../../styles/GlobalComponents";
+import { projects } from "../../constants/constants";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Projects = () => {
   return (
@@ -39,7 +40,7 @@ const Projects = () => {
               </TitleContent>
               <CardInfo>{description}</CardInfo>
               <TagsContainer>
-                <HeaderThree>Stack</HeaderThree>
+                <Hr></Hr>
                 <TagList>
                   {tags.map((tag, i) => (
                     <Tag key={i}>{tag}</Tag>
@@ -89,7 +90,7 @@ const Projects = () => {
         )}
       </GridContainer>
     </Section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

@@ -16,8 +16,7 @@ const Hero = () => (
         Daniil Blinnikov
       </MainHeader>
       <SectionText>
-        I am a Frontend Developer, I build web applications focusing on creating
-        great UI and UX
+        I am Frontend Developer, I build high quality web applications.
       </SectionText>
     </LeftSection>
   </Section>

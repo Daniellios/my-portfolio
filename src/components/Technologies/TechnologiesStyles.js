@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion";
 
 export const ImageContainer = styled.div`
   text-align: center;
@@ -27,11 +27,11 @@ export const ImageContainer = styled.div`
     padding: 0;
     margin-top: 16px;
   }
-`
+`;
 
 export const MainImage = styled.img`
   width: 100%;
-`
+`;
 
 export const List = styled(motion.ul)`
   list-style-type: none;
@@ -50,11 +50,11 @@ export const List = styled(motion.ul)`
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin: 32px 0;
   }
-`
+`;
 
 export const ListContainer = styled.div`
   display: flex;
@@ -65,7 +65,7 @@ export const ListContainer = styled.div`
     display: flex;
     // margin-left: 18px;
   }
-`
+`;
 
 export const ListTitle = styled.h4`
   font-weight: 700;
@@ -86,7 +86,7 @@ export const ListTitle = styled.h4`
     letter-spacing: 0.02em;
     margin-bottom: 4px;
   }
-`
+`;
 
 export const ListParagraph = styled.p`
   font-size: 18px;
@@ -102,12 +102,12 @@ export const ListParagraph = styled.p`
     font-size: 15px;
     line-height: 22px;
   }
-`
+`;
 
 export const ListSkillLevel = styled.div`
   display: flex;
   flex-direction: row;
-`
+`;
 
 export const ListItem = styled(motion.li)`
   display: flex;
@@ -126,7 +126,7 @@ export const ListItem = styled(motion.li)`
     margin-bottom: 14px;
     max-width: 320px;
   }
-`
+`;
 
 export const ListIcon = styled.img`
   display: block;
@@ -145,4 +145,4 @@ export const ListIcon = styled.img`
     height: 32px;
     margin-bottom: 0px;
   }
-`
+`;

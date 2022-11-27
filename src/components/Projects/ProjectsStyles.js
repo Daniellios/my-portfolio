@@ -59,11 +59,11 @@ export const HeaderThree = styled.h3`
 `;
 
 export const Hr = styled.hr`
-  width: 50px;
-  height: 3px;
-  margin: 20px auto;
+  width: 100%;
+  height: 1px;
+  margin: 0 auto 1rem auto;
   border: 0;
-  background: #a24124;
+  background-color: ${(props) => props.theme.colors.black}; ;
 `;
 
 export const Intro = styled.div`
@@ -119,7 +119,7 @@ export const TagList = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  padding: 2rem 2rem 0 2rem;
+  padding: 0rem 2rem 0 2rem;
 `;
 
 export const Tag = styled.li`

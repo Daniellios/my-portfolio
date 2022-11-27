@@ -1,45 +1,42 @@
-import React, { useEffect, useRef } from "react"
-import { DiJsBadge } from "react-icons/di"
-import { ImGit } from "react-icons/im"
+import React, { useEffect, useRef } from "react";
+import { DiJsBadge } from "react-icons/di";
+import { ImGit } from "react-icons/im";
 import {
   SiTypescript,
   SiSass,
   SiNotion,
   SiReact,
   SiRedux,
-} from "react-icons/si"
+} from "react-icons/si";
 import {
   Section,
   SectionText,
   SectionTitle,
   ListTitle,
-} from "../../styles/GlobalComponents"
+} from "../../styles/GlobalComponents";
 import {
   List,
   ListContainer,
   ListItem,
   ListParagraph,
-} from "./TechnologiesStyles"
-import { Icon } from "@iconify/react"
-import { AnimatePresence, motion, useInView } from "framer-motion"
+} from "./TechnologiesStyles";
+import { Icon } from "@iconify/react";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 
-import { listVariant, listItemVariant } from "../../framer/animations"
+import { listVariant, listItemVariant } from "../../framer/animations";
 
 const Technologies = () => {
-  const listRef = useRef(null)
-  const isInView = useInView(listRef)
+  const listRef = useRef(null);
+  const isInView = useInView(listRef);
 
   useEffect(() => {
-    console.log("Element is in view: ", isInView)
-  }, [isInView])
+    console.log("Element is in view: ", isInView);
+  }, [isInView]);
 
   return (
     <Section id="skills">
-      <br />
       <SectionTitle>Skills</SectionTitle>
-      <SectionText>
-        Technologies that I know or have expierience with
-      </SectionText>
+      <SectionText>Technologies and instruments that I work with</SectionText>
 
       {/* TECH KNOWLEDGE */}
       <List
@@ -53,10 +50,6 @@ const Technologies = () => {
           <DiJsBadge size="3rem" />
           <ListContainer>
             <ListTitle>JavaScript</ListTitle>
-            {/* <ListParagraph>
-              My main programming language and the one I have the most
-              experience with.
-            </ListParagraph> */}
           </ListContainer>
         </ListItem>
 
@@ -64,9 +57,6 @@ const Technologies = () => {
           <SiTypescript size="3rem" />
           <ListContainer>
             <ListTitle>TypeScript</ListTitle>
-            {/* <ListParagraph>
-              Essential part in every commercial project that I've ever made.
-            </ListParagraph> */}
           </ListContainer>
         </ListItem>
 
@@ -74,10 +64,6 @@ const Technologies = () => {
           <SiReact size="3rem" />
           <ListContainer>
             <ListTitle>ReactJS</ListTitle>
-            {/* <ListParagraph>
-              Used it mostly for personal projects and as a builder for PixiJS
-              projects.
-            </ListParagraph> */}
           </ListContainer>
         </ListItem>
 
@@ -85,9 +71,6 @@ const Technologies = () => {
           <SiRedux size="3rem" />
           <ListContainer>
             <ListTitle>Redux</ListTitle>
-            {/* <ListParagraph>
-              My go to State Manager while working on projects
-            </ListParagraph> */}
           </ListContainer>
         </ListItem>
 
@@ -95,9 +78,6 @@ const Technologies = () => {
           <Icon icon="cib:next-js" height="30px" />
           <ListContainer>
             <ListTitle>NextJS</ListTitle>
-            {/* <ListParagraph>
-              My go to choice for SSR and smart bundling
-            </ListParagraph> */}
           </ListContainer>
         </ListItem>
 
@@ -105,10 +85,6 @@ const Technologies = () => {
           <Icon icon="logos:pixijs" height="30" />
           <ListContainer>
             <ListTitle>PixiJS</ListTitle>
-            {/* <ListParagraph>
-              My main tool during work at "PlaybleArt" as a playble ads
-              developer.
-            </ListParagraph> */}
           </ListContainer>
         </ListItem>
 
@@ -116,9 +92,6 @@ const Technologies = () => {
           <SiSass size="3rem" />
           <ListContainer>
             <ListTitle>Sass</ListTitle>
-            {/* <ListParagraph>
-              By far the most used CSS pre-processor of mine.
-            </ListParagraph> */}
           </ListContainer>
         </ListItem>
 
@@ -126,22 +99,11 @@ const Technologies = () => {
           <ImGit size="3rem" />
           <ListContainer>
             <ListTitle>Git</ListTitle>
-            {/* <ListParagraph>Experienced user of git.</ListParagraph> */}
-          </ListContainer>
-        </ListItem>
-
-        <ListItem>
-          <SiNotion size="3rem" />
-          <ListContainer>
-            <ListTitle>Notion</ListTitle>
-            {/* <ListParagraph>
-              Used this workspace managment tool to collaborate on projects.
-            </ListParagraph> */}
           </ListContainer>
         </ListItem>
       </List>
     </Section>
-  )
-}
+  );
+};
 
-export default Technologies
+export default Technologies;
