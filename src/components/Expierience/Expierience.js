@@ -1,5 +1,5 @@
-import React from "react"
-import { Jobs } from "../../constants/constants"
+import React from "react";
+import { Jobs } from "../../constants/constants";
 import {
   Section,
   SectionTitle,
@@ -8,15 +8,15 @@ import {
   SectionDates,
   SectionSubText,
   IconWrapper,
-} from "../../styles/GlobalComponents"
+} from "../../styles/GlobalComponents";
 
-import { IoMdArrowDropright } from "react-icons/io"
-import { JobsWrapper, Job, JobTask, JobTasks } from "./ExpierienceStyles"
+import { IoMdArrowDropright } from "react-icons/io";
+import { JobsWrapper, Job, JobTask, JobTasks } from "./ExpierienceStyles";
 
 const Expierience = () => {
   return (
     <Section id="experience">
-      <SectionTitle>Experience </SectionTitle>
+      <SectionTitle>Work Experience </SectionTitle>
 
       <JobsWrapper>
         {Jobs.map((job, index) => (
@@ -38,7 +38,7 @@ const Expierience = () => {
         ))}
       </JobsWrapper>
     </Section>
-  )
-}
+  );
+};
 
-export default Expierience
+export default Expierience;

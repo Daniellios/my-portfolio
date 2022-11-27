@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import Expierience from "../components/Expierience/Expierience";
 import Hero from "../components/Hero/Hero";
 import Projects from "../components/Projects/Projects";
@@ -6,12 +8,18 @@ import { Layout } from "../layout/Layout";
 
 const Home = () => {
   return (
-    <Layout>
-      <Hero />
-      <Projects />
-      <Technologies />
-      <Expierience />
-    </Layout>
+    <>
+      <Head>
+        <title> Portfolio | Daniil Blinnikov</title>
+      </Head>
+
+      <Layout>
+        <Hero />
+        <Projects />
+        <Technologies />
+        <Expierience />
+      </Layout>
+    </>
   );
 };
 
