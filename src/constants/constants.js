@@ -9,6 +9,15 @@ export const projects = [
     id: 7,
   },
   {
+    title: "Mail Clone",
+    description: "VK all Cup qualification task",
+    images: ["/images/Mail.png"],
+    tags: ["NextJS", "TypeScript", "Tailwind CSS", "Supabase"],
+    source: "https://github.com/Daniellios/vk-all-cup",
+    visit: "https://vk-all-cup.vercel.app/",
+    id: 8,
+  },
+  {
     title: "Invoice App",
     description:
       "Store and manage the most important info about the rendered services in one place.",

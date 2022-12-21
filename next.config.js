@@ -5,6 +5,7 @@ const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
  */
 
 const nextConfig = {
+  cleanDistDir: true,
   async rewrites() {
     return [
       {
