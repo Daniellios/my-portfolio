@@ -141,8 +141,3 @@ export const TimeLineData = [
   { year: 2021, text: "Got my first job in Front-end as a PixiJS developer" },
   { year: 2022, text: "Still honing and improving my skills" },
 ];
-
-export const Languages = [
-  { code: "en", name: "English" },
-  { code: "rus", name: "Русский" },
-];

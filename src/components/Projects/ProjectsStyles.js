@@ -53,6 +53,7 @@ export const TitleContent = styled(motion.div)`
 `;
 
 export const HeaderThree = styled.h3`
+  font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: 2px;
   color: ${(props) => props.theme.colors.black};

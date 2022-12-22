@@ -24,9 +24,12 @@ import { Icon } from "@iconify/react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 
 import { listVariant, listItemVariant } from "../../framer/animations";
+import useTranslation from "next-translate/useTranslation";
 
 const Technologies = () => {
   const listRef = useRef(null);
+  const { t } = useTranslation("skills");
+
   const isInView = useInView(listRef);
 
   useEffect(() => {
@@ -35,8 +38,8 @@ const Technologies = () => {
 
   return (
     <Section id="skills">
-      <SectionTitle>Skills</SectionTitle>
-      <SectionText>Technologies and instruments that I work with</SectionText>
+      <SectionTitle>{t("title")}</SectionTitle>
+      <SectionText>{t("desc")}</SectionText>
 
       {/* TECH KNOWLEDGE */}
       <List

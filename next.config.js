@@ -3,6 +3,9 @@ const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 /**
  * @type {import('next').NextConfig}
  */
+const nextTranslate = require("next-translate");
+
+// module.exports = nextTranslate();
 
 const nextConfig = {
   cleanDistDir: true,
@@ -21,11 +24,24 @@ const nextConfig = {
   images: {
     domains: ["i.ibb.co"],
   },
-
-  // i18n: {
-  //   locales: ["ru-Ru", "en-US"],
-  //   defaultLocale: "ru-Ru",
-  // },
 };
 
-module.exports = nextConfig;
+module.exports = nextTranslate({
+  reactStrictMode: true,
+  cleanDistDir: true,
+  async rewrites() {
+    return [
+      {
+        source: "/htmls/HiddenObjGame.html",
+        destination: "/htmls/HiddenObjGame.html",
+      },
+      {
+        source: "/my-portfolio-blue-pi.vercel.app/htmls/MahjongGame.html",
+        destination: "/htmls/MahjongGame.html",
+      },
+    ];
+  },
+  images: {
+    domains: ["i.ibb.co"],
+  },
+});

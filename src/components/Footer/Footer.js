@@ -1,9 +1,6 @@
+import useTranslation from "next-translate/useTranslation";
 import React from "react";
-import {
-  AiFillGithub,
-  AiFillSlackCircle,
-  AiFillLinkedin,
-} from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import { FaTelegram } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
@@ -25,19 +22,20 @@ import {
 } from "./FooterStyles";
 
 const Footer = () => {
+  const { t } = useTranslation("footer");
   return (
     <FooterWrapper id="contacts">
       <FooterContainer>
         <ContactContainer>
-          <ContactTitle>Contact me!</ContactTitle>
+          <ContactTitle>{t("contact")}</ContactTitle>
           <LinkList>
             <LinkColumn>
-              <LinkTitle> Call </LinkTitle>
+              <LinkTitle>{t("call")} </LinkTitle>
               <LinkItem href="tel:7-977-452-62-17">+7-977-452-62-17 </LinkItem>
             </LinkColumn>
 
             <LinkColumn>
-              <LinkTitle> Email </LinkTitle>
+              <LinkTitle>{t("email")}</LinkTitle>
               <LinkItem href="mailto:danielo49134@gmail.com">
                 danielo49134@gmail.com
               </LinkItem>

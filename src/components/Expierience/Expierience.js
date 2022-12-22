@@ -12,25 +12,28 @@ import {
 
 import { IoMdArrowDropright } from "react-icons/io";
 import { JobsWrapper, Job, JobTask, JobTasks } from "./ExpierienceStyles";
+import useTranslation from "next-translate/useTranslation";
 
 const Expierience = () => {
+  const { t } = useTranslation("exp");
+
   return (
     <Section id="experience">
-      <SectionTitle>Work Experience </SectionTitle>
+      <SectionTitle>{t("title")} </SectionTitle>
 
       <JobsWrapper>
-        {Jobs.map((job, index) => (
-          <Job key={index}>
-            <ListTitle>{job.title}</ListTitle>
+        {Jobs.map((job, jIDX) => (
+          <Job key={jIDX}>
+            <ListTitle>{t(`j${jIDX}T`)}</ListTitle>
             <SectionText jobtitle>@ {job.company}</SectionText>
-            <SectionDates jobtitle> {job.range}</SectionDates>
+            <SectionDates jobtitle>{t(`j${jIDX}D`)}</SectionDates>
             <JobTasks>
-              {job.tasks.map((task, index) => (
-                <JobTask key={index + task.charAt(index)}>
+              {job.tasks.map((task, tIDX) => (
+                <JobTask key={jIDX + task.charAt(tIDX)}>
                   <IconWrapper>
                     <IoMdArrowDropright />
                   </IconWrapper>
-                  {task}
+                  {t(`j${jIDX}TASK${tIDX}`)}
                 </JobTask>
               ))}
             </JobTasks>

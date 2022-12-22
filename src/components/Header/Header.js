@@ -14,12 +14,15 @@ import {
   MenuIconWrapper,
   NavLinksSidebar,
   HeaderWrapper,
+  LanguageWrap,
+  LanguageChange,
 } from "./HeaderStyles";
 import useOnClickOutside from "../../hooks/useOnClickOutside";
+import useTranslation from "next-translate/useTranslation";
 
 const Header = ({ isModalOpen, setIsModalOpen }) => {
+  const { t, lang } = useTranslation("header");
   const handleModal = () => setIsModalOpen(!isModalOpen);
-
   const buttonRef = useRef(null);
   const wrapperRef = useRef();
   const onResize = (e) => {
@@ -52,7 +55,7 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
           {HeaderTitles.map((item, index) => (
             <li key={item + index}>
               <Link href={item.link}>
-                <NavLink>{item.title}</NavLink>
+                <NavLink>{t(`title${index}`)}</NavLink>
               </Link>
             </li>
           ))}
@@ -92,6 +95,7 @@ const Header = ({ isModalOpen, setIsModalOpen }) => {
             </NavLinksSidebar>
           )}
         </AnimatePresence>
+
         <MenuIconWrapper
           isheader="true"
           key={"menuWrap"}

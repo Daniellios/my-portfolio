@@ -115,7 +115,6 @@ export const NavLinksSidebar = styled(motion.div)`
 
 export const NavSocialIconsDiv = styled.div`
   display: flex;
-  gap: 2rem;
   justify-content: space-around;
   align-items: center;
 
@@ -143,6 +142,47 @@ export const NavLink = styled.a`
   }
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 0.5rem;
+  }
+`;
+
+export const LanguageWrap = styled.div`
+  position: absolute;
+  width: 100%;
+  justify-content: end;
+  padding-right: 2rem;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 1rem;
+
+  @media ${(props) => props.theme.breakpoints.xsm} {
+    gap: 0.5rem;
+  }
+`;
+
+export const LanguageChange = styled.span`
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: black;
+  transition: 0.2s ease;
+  color: ${(props) => (props.isCurrent ? props.theme.colors.hover : "black")};
+  border-radius: 50%;
+  &:hover {
+    color: ${(props) => props.theme.colors.hover};
+    cursor: pointer;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xsm} {
+    font-size: 1rem;
   }
 `;
 

@@ -17,14 +17,20 @@ import { Section, SectionTitle } from "../../styles/GlobalComponents";
 import { projects } from "../../constants/constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import useTranslation from "next-translate/useTranslation";
 
 const Projects = () => {
+  const { t } = useTranslation("proj");
+
   return (
     <Section id="projects">
-      <SectionTitle main>Projects</SectionTitle>
+      <SectionTitle main>{t("title")}</SectionTitle>
       <GridContainer>
         {projects.map(
-          ({ id, images, title, isGame, description, tags, source, visit }) => (
+          (
+            { id, images, title, isGame, description, tags, source, visit },
+            idx
+          ) => (
             <BlogCard key={id} as={motion.div} whileHover={{ scale: 1.01 }}>
               <ImgContainer>
                 <Image
@@ -36,9 +42,9 @@ const Projects = () => {
                 ></Image>
               </ImgContainer>
               <TitleContent>
-                <HeaderThree title="true">{title}</HeaderThree>
+                <HeaderThree title="true">{t(`p${idx}`)}</HeaderThree>
               </TitleContent>
-              <CardInfo>{description}</CardInfo>
+              <CardInfo>{t(`d${idx}`)}</CardInfo>
               <TagsContainer>
                 <Hr></Hr>
                 <TagList>
