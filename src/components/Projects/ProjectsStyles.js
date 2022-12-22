@@ -35,8 +35,12 @@ export const BlogCard = styled(motion.div)`
   flex-direction: column;
   width: 400px;
   padding-bottom: 1rem;
+  -webkit-box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.3);
+
   background: ${(props) => props.theme.colors.background1};
-  border: 1px solid black;
+  /* border: 1px solid black; */
   cursor: pointer;
   flex-basis: 100%;
 
@@ -64,6 +68,7 @@ export const Hr = styled.hr`
   height: 1px;
   margin: 0 auto 1rem auto;
   border: 0;
+  opacity: 50%;
   background-color: ${(props) => props.theme.colors.black}; ;
 `;
 

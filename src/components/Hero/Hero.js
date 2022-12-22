@@ -12,7 +12,7 @@ import { LanguageChange, LanguageWrap } from "../Header/HeaderStyles";
 import { useRouter } from "next/dist/client/router";
 
 const Hero = () => {
-  const { t, lang } = useTranslation("hero");
+  const { t } = useTranslation("hero");
   const router = useRouter();
 
   return (

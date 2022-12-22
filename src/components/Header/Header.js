@@ -21,7 +21,7 @@ import useOnClickOutside from "../../hooks/useOnClickOutside";
 import useTranslation from "next-translate/useTranslation";
 
 const Header = ({ isModalOpen, setIsModalOpen }) => {
-  const { t, lang } = useTranslation("header");
+  const { t } = useTranslation("header");
   const handleModal = () => setIsModalOpen(!isModalOpen);
   const buttonRef = useRef(null);
   const wrapperRef = useRef();
