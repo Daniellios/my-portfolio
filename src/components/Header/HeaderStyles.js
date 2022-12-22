@@ -6,7 +6,6 @@ export const Container = styled(motion.div)`
   top: 0;
   left: 0;
   width: inherit;
-
   display: flex;
   align-items: center;
   justify-self: center;
@@ -153,13 +152,21 @@ export const LanguageWrap = styled.div`
   display: flex;
   top: 0;
   left: 0;
+  pointer-events: none;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  gap: 1rem;
+  gap: 0.5rem;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    top: 2rem;
+    z-index: 10;
+    position: fixed;
+  }
 
   @media ${(props) => props.theme.breakpoints.xsm} {
-    gap: 0.5rem;
+    left: 1rem;
+    justify-content: start;
   }
 `;
 
@@ -168,9 +175,10 @@ export const LanguageChange = styled.span`
   justify-content: center;
   cursor: pointer;
   align-items: center;
+  pointer-events: all;
   width: 2rem;
   height: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.5rem;
   color: black;
   transition: 0.2s ease;
@@ -181,7 +189,8 @@ export const LanguageChange = styled.span`
     cursor: pointer;
   }
 
-  @media ${(props) => props.theme.breakpoints.xsm} {
+  @media ${(props) => props.theme.breakpoints.sm} {
+    color: ${(props) => (props.isCurrent ? props.theme.colors.hover : "white")};
     font-size: 1rem;
   }
 `;
