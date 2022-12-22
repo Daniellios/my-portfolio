@@ -10,6 +10,7 @@ import { LeftSection } from "./HeroStyles";
 import Link from "next/link";
 import { LanguageChange, LanguageWrap } from "../Header/HeaderStyles";
 import { useRouter } from "next/dist/client/router";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const { t } = useTranslation("hero");
@@ -17,7 +18,15 @@ const Hero = () => {
 
   return (
     <Section isHero>
-      <LanguageWrap>
+      <LanguageWrap
+        as={motion.div}
+        initial={{ y: -100, opacity: 0.3 }}
+        animate={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{ y: { duration: 0.2 } }}
+      >
         <Link href="/" locale="ru">
           <LanguageChange isCurrent={router.locale === "ru" ? true : false}>
             RU

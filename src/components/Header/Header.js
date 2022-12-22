@@ -14,8 +14,6 @@ import {
   MenuIconWrapper,
   NavLinksSidebar,
   HeaderWrapper,
-  LanguageWrap,
-  LanguageChange,
 } from "./HeaderStyles";
 import useOnClickOutside from "../../hooks/useOnClickOutside";
 import useTranslation from "next-translate/useTranslation";

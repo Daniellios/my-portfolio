@@ -144,7 +144,7 @@ export const NavLink = styled.a`
   }
 `;
 
-export const LanguageWrap = styled.div`
+export const LanguageWrap = styled(motion.div)`
   position: absolute;
   width: 100%;
   justify-content: end;
