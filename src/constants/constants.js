@@ -1,3 +1,16 @@
+import { DiJsBadge } from "react-icons/di";
+import {
+  SiNestjs,
+  SiPostgresql,
+  SiReact,
+  SiRedux,
+  SiSass,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
+import { Icon } from "@iconify/react";
+import { ImGit } from "react-icons/im";
+
 export const projects = [
   {
     title: "Admin Dashboard",
@@ -109,6 +122,20 @@ export const HeaderTitles = [
 
 export const Jobs = [
   {
+    id: 0,
+    title: "Fullstack Developer",
+    company: "VIECO",
+    tasks: [
+      "Developed client app with React, TypeScript, Next.js, TailWind",
+      "Developed admin dashboard panel",
+      "Designed and developed REST API with NestJS, PostgreSQL",
+      "Integration of fron-end and backend",
+      "Architectural and business logic coordination",
+    ],
+    range: "September 2022 - Now",
+  },
+  {
+    id: 1,
     title: "PixiJS Developer",
     company: "PlayableArt",
     tasks: [
@@ -120,6 +147,7 @@ export const Jobs = [
     range: "December - June 2022",
   },
   {
+    id: 2,
     title: "HTML Layout Designer",
     company: "Freelance",
     tasks: [
@@ -129,6 +157,19 @@ export const Jobs = [
     ],
     range: "September - December 2021",
   },
+];
+
+export const TechIcons = [
+  <SiReact size="3rem" color="rgb(97, 218, 251)" />,
+  <SiRedux color="rgb(118, 74, 188)" size="3rem" />,
+  <DiJsBadge size="3rem" color="#FFD600" />,
+  <SiTypescript size="3rem" color="#0D61A9" />,
+  <Icon icon="cib:next-js" height="48px" />,
+  <SiNestjs size="3rem" color="#F50057"></SiNestjs>,
+  <SiPostgresql size="3rem" color="#0277BD"></SiPostgresql>,
+  <SiSass size="3rem" color="#F06292" />,
+  <SiTailwindcss size="3rem" color="#00ACC1"></SiTailwindcss>,
+  <ImGit size="3rem" color="#F4511E" />,
 ];
 
 export const TimeLineData = [

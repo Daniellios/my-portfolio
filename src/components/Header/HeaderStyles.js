@@ -148,6 +148,7 @@ export const LanguageWrap = styled(motion.div)`
   position: absolute;
   width: 100%;
   justify-content: end;
+  align-items: center;
   padding-right: 2rem;
   display: flex;
   top: 0;

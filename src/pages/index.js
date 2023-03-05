@@ -12,7 +12,6 @@ const Home = () => {
       <Head>
         <title> Portfolio | Daniil Blinnikov</title>
       </Head>
-
       <Layout>
         <Hero />
         <Projects />

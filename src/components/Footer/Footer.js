@@ -62,7 +62,7 @@ const Footer = () => {
             </SocialIcons>
 
             <SocialIcons
-              href="https://hh.ru/resume/92b2ea36ff09bd84230039ed1f6f644f304b39"
+              href="https://hh.ru/resume/f17b51cfff0b81e8200039ed1f727a6b544776"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -77,7 +77,7 @@ const Footer = () => {
             </SocialIcons>
           </SocialContainer>
         </SocialIconsContainer>
-        <Contribution href="https://github.com/Daniellios/my-portfolio">
+        <Contribution href="#">
           Designed & Built by Daniil Blinnikov
         </Contribution>
       </FooterContainer>
