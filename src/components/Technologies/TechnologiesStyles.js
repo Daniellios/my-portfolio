@@ -97,10 +97,6 @@ export const ListItem = styled(motion.div)`
   max-width: 320px;
   text-align: center;
 
-  &:hover svg {
-    fill: ${(props) => props.theme.colors.orange};
-  }
-
   @media ${(props) => props.theme.breakpoints.md} {
     max-width: 203px;
   }

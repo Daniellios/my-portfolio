@@ -22,23 +22,21 @@ const Technologies = () => {
             <ListItem
               key={idx}
               initial="initial"
-              animate={["animate", "initialHide"]}
+              animate={["initialHide", "animate"]}
               variants={{
                 initial: {
-                  opacity: 0.2,
+                  translateX: 0,
+                  opacity: 0.3,
                 },
                 initialHide: {
                   opacity: 1,
-                  transition: {
-                    delay: 0.2,
-                  },
                 },
                 animate: {
-                  translateX: -100,
+                  translateX: idx % 2 === 0 ? -100 : 100,
                   transition: {
-                    duration: 4,
+                    duration: 5,
                     repeat: Infinity,
-                    delay: idx / 2 + 0.2,
+                    delay: idx % 2 === 0 ? 0.1 : 0.2,
                     repeatType: "reverse",
                     ease: "linear",
                   },

@@ -24,16 +24,17 @@ export const GridContainer = styled.section`
     display: flex;
     flex-direction: column;
     padding-bottom: 0;
-    padding: 1rem;
+    padding: 0;
   }
 `;
+
 export const BlogCard = styled(motion.div)`
   border-radius: ${(props) => props.theme.sizes.border};
   text-align: center;
   display: flex;
   gap: 1rem;
   flex-direction: column;
-  width: 400px;
+  max-width: 400px;
   height: 550px;
   padding-bottom: 1rem;
   -webkit-box-shadow: 0px 3px 15px 2px rgba(0, 0, 0, 0.3);
@@ -47,7 +48,7 @@ export const BlogCard = styled(motion.div)`
 
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
   }
 `;
 export const TitleContent = styled(motion.div)`
