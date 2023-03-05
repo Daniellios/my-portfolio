@@ -37,8 +37,9 @@ const Projects = () => {
                   src={images[0]}
                   alt="project image"
                   width={432}
+                  layout="fixed"
                   height={220}
-                  style={{ borderRadius: " 10px 10px 0 0" }}
+                  style={{ borderRadius: "10px 10px 0 0" }}
                 ></Image>
               </ImgContainer>
               <TitleContent>

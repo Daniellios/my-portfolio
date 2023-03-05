@@ -29,7 +29,7 @@ const Expierience = () => {
             <SectionDates jobtitle>{t(`j${jIDX}D`)}</SectionDates>
             <JobTasks>
               {job.tasks.map((task, tIDX) => (
-                <JobTask key={jIDX + task.charAt(tIDX)}>
+                <JobTask key={job.id + task.length}>
                   <IconWrapper>
                     <IoMdArrowDropright />
                   </IconWrapper>

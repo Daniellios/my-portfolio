@@ -29,16 +29,46 @@ export const ImageContainer = styled.div`
   }
 `;
 
-export const MainImage = styled.img`
-  width: 100%;
+export const Section = styled.section`
+  display: ${(props) => (props.grid ? "grid" : "flex")};
+  flex-direction: ${(props) => (props.row ? "row" : "column")};
+  padding: ${(props) => (props.nopadding ? "0" : "32px 24px 0")};
+  margin: 0 auto;
+  // min-height: 400px;
+  max-width: 1440px;
+  box-sizing: content-box;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  margin-top: ${(props) => (props.isHero ? "6rem" : "2rem")};
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    padding: 0 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: ${(props) => (props.nopadding ? "0" : "16px 16px 0")};
+    width: calc(100vw - 32px);
+    flex-direction: column;
+  }
 `;
 
-export const List = styled(motion.ul)`
+export const ListContainter = styled.div`
+  position: relative;
+  width: 100%;
+  height: 400px;
+`;
+
+export const List = styled(motion.div)`
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  margin: 3rem 0;
+
+  // right: 50%;
+  // // left: 50%;
+  // position: absolute;
 
   @media ${(props) => props.theme.breakpoints.lg} {
     margin: 64px 0;
@@ -56,93 +86,26 @@ export const List = styled(motion.ul)`
   }
 `;
 
-export const ListContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
+export const ListItem = styled(motion.div)`
+  // height: 40px;
+  // width: 300px;
 
-  @media ${(props) => props.theme.breakpoints.sm} {
-    display: flex;
-    // margin-left: 18px;
-  }
-`;
-
-export const ListTitle = styled.h4`
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 32px;
-  letter-spacing: 0.02em;
-  color: ${(props) => props.theme.colors.black};
-  margin-bottom: 8px;
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    font-size: 24px;
-    line-height: 28px;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: 20px;
-    line-height: 28px;
-    letter-spacing: 0.02em;
-    margin-bottom: 4px;
-  }
-`;
-
-export const ListParagraph = styled.p`
-  font-size: 18px;
-  line-height: 30px;
-  color: ${(props) => props.theme.colors.primary1};
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    font-size: 16px;
-    line-height: 28px;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: 15px;
-    line-height: 22px;
-  }
-`;
-
-export const ListSkillLevel = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
-
-export const ListItem = styled(motion.li)`
-  display: flex;
+  pointer-events: none;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   max-width: 320px;
   text-align: center;
-  row-gap: 1.5rem;
+
+  &:hover svg {
+    fill: ${(props) => props.theme.colors.orange};
+  }
 
   @media ${(props) => props.theme.breakpoints.md} {
     max-width: 203px;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    margin-bottom: 14px;
     max-width: 320px;
-  }
-`;
-
-export const ListIcon = styled.img`
-  display: block;
-  width: 48px;
-  height: 48px;
-  margin-bottom: 10px;
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 8px;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    width: 32px;
-    height: 32px;
-    margin-bottom: 0px;
   }
 `;
