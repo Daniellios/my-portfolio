@@ -87,9 +87,6 @@ export const List = styled(motion.div)`
 `;
 
 export const ListItem = styled(motion.div)`
-  // height: 40px;
-  // width: 300px;
-
   pointer-events: none;
   flex-direction: column;
   align-items: center;

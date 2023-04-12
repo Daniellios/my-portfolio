@@ -16,7 +16,7 @@ export const projects = [
     title: "Admin Dashboard",
     images: ["https://i.ibb.co/W6g39w3/image.png"],
     description: "Multi page and purpose Admin Dashboard",
-    tags: ["React", "Tailwind", "Syncfusion"],
+    tags: ["React", "Tailwind"],
     source: "https://github.com/Daniellios/dashboard-main",
     visit: "https://effervescent-bonbon-b72539.netlify.app/",
     id: 7,

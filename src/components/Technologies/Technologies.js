@@ -7,7 +7,6 @@ import useTranslation from "next-translate/useTranslation";
 import { TechIcons } from "../../constants/constants";
 
 const Technologies = () => {
-  const listRef = useRef(null);
   const { t } = useTranslation("skills");
 
   return (
@@ -36,7 +35,7 @@ const Technologies = () => {
                   transition: {
                     duration: 5,
                     repeat: Infinity,
-                    delay: idx % 2 === 0 ? 0.1 : 0.2,
+                    delay: idx % 2 === 0 ? 0.1 + idx / 2 : 0.2 + idx / 4,
                     repeatType: "reverse",
                     ease: "linear",
                   },
