@@ -3,7 +3,7 @@ const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 /**
  * @type {import('next').NextConfig}
  */
-const nextTranslate = require("next-translate");
+const nextTranslate = require("next-translate-plugin");
 
 module.exports = nextTranslate({
   reactStrictMode: true,

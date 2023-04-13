@@ -31,23 +31,6 @@ export const projects = [
     id: 8,
   },
   {
-    title: "Invoice App",
-    description:
-      "Store and manage the most important info about the rendered services in one place.",
-    images: ["/images/InvoiceApp.jpg"],
-    tags: [
-      "React",
-      "Redux",
-      "NextJS",
-      "TypeScript",
-      "JavaScript",
-      "React Styled Components",
-    ],
-    source: "https://github.com/Daniellios/invoice-app",
-    visit: "https://invoice-app-delta.vercel.app/",
-    id: 4,
-  },
-  {
     title: "Task Manager",
     description: "Task manager to keep track of things you need to do",
     images: ["/images/TaskManagerUI.png"],
@@ -63,6 +46,23 @@ export const projects = [
     source: "https://github.com/Daniellios/todo-app",
     visit: "https://todo-app-hazel-six.vercel.app",
     id: 2,
+  },
+  {
+    title: "Invoice App",
+    description:
+      "Store and manage the most important info about the rendered services in one place.",
+    images: ["/images/InvoiceApp.jpg"],
+    tags: [
+      "React",
+      "Redux",
+      "NextJS",
+      "TypeScript",
+      "JavaScript",
+      "React Styled Components",
+    ],
+    source: "https://github.com/Daniellios/invoice-app",
+    visit: "https://invoice-app-delta.vercel.app/",
+    id: 4,
   },
 
   {
