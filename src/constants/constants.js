@@ -51,14 +51,7 @@ export const projects = [
     description:
       "Store and manage the most important info about the rendered services in one place.",
     images: ["/images/InvoiceApp.jpg"],
-    tags: [
-      "React",
-      "Redux",
-      "NextJS",
-      "TypeScript",
-      "JavaScript",
-      "React Styled Components",
-    ],
+    tags: ["React", "Redux", "NextJS", "TypeScript", "React Styled Components"],
     source: "https://github.com/Daniellios/invoice-app",
     visit: "https://invoice-app-delta.vercel.app/",
     id: 4,
@@ -70,7 +63,7 @@ export const projects = [
     description:
       "One of my projects on my previous position as a PixiJs developer",
     images: ["/images/Hidden.png"],
-    tags: ["JavaScript", "TypeScript", "React", "PixiJs", "HTML", "CSS"],
+    tags: ["TypeScript", "React", "PixiJs", "HTML", "CSS"],
     source: "https://daniellios.github.io/HO-test/",
     visit:
       "https://drive.google.com/drive/folders/1RgRW-RVp80i7Qs_fjVID8HbSXoIZPl48?usp=sharing",
@@ -81,7 +74,7 @@ export const projects = [
     isGame: true,
     description: "Playable ad for yandex-food",
     images: ["/images/Ya-food.jpg"],
-    tags: ["JavaScript", "TypeScript", "React", "PixiJs", "HTML", "CSS"],
+    tags: ["TypeScript", "React", "PixiJs", "HTML", "CSS"],
     source: "https://daniellios.github.io/yndx-food/",
     visit:
       "https://drive.google.com/drive/folders/18X62PfO4a8kYyR3h6n5pTH0RqOKAz8S1?usp=sharing",
@@ -92,7 +85,7 @@ export const projects = [
     isGame: true,
     description: "This is a mahjong game I made for G5 Entertainment.",
     images: ["/images/Mahjong.png"],
-    tags: ["JavaScript", "TypeScript", "React", "PixiJs", "HTML", "CSS"],
+    tags: ["TypeScript", "React", "PixiJs", "HTML", "CSS"],
     source: "https://daniellios.github.io/SM-game/",
     visit:
       "https://drive.google.com/drive/folders/1AgifLkc0QmPan-ATlKTtLscLbLCB3586?usp=sharing",
