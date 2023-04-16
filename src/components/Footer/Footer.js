@@ -62,7 +62,7 @@ const Footer = () => {
             </SocialIcons>
 
             <SocialIcons
-              href="https://hh.ru/resume/f17b51cfff0b81e8200039ed1f727a6b544776"
+              href="https://hh.ru/resume/92b2ea36ff09bd84230039ed1f6f644f304b39"
               target="_blank"
               rel="noopener noreferrer"
             >
