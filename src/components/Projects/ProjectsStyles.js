@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 export const ImgContainer = styled.div`
   position: relative;
@@ -48,7 +48,7 @@ export const BlogCard = styled(motion.div)`
 
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
   }
 `;
 export const TitleContent = styled(motion.div)`
@@ -96,14 +96,14 @@ export const Hr = styled.hr`
   margin: 0 auto 1rem auto;
   border: 0;
   opacity: 50%;
-  background-color: ${(props) => props.theme.colors.black}; ;
+  background-color: ${(props) => props.theme.colors.black};
 `;
 
 export const Intro = styled.div`
   width: 170px;
   margin: 0 auto;
   color: #dce3e7;
-  font-family: "Droid Serif", serif;
+  font-family: 'Droid Serif', serif;
   font-size: 13px;
   font-style: italic;
   line-height: 18px;

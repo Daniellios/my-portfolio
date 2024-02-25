@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   BlogCard,
   CardInfo,
@@ -12,19 +12,19 @@ import {
   Hr,
   UtilityList,
   ImgContainer,
-} from "./ProjectsStyles";
-import { Section, SectionTitle } from "../../styles/GlobalComponents";
-import { projects } from "../../constants/constants";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import useTranslation from "next-translate/useTranslation";
+} from './ProjectsStyles';
+import { Section, SectionTitle } from '../../styles/GlobalComponents';
+import { projects } from '../../constants/constants';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import useTranslation from 'next-translate/useTranslation';
 
 const Projects = () => {
-  const { t } = useTranslation("proj");
+  const { t } = useTranslation('proj');
 
   return (
-    <Section id="projects">
-      <SectionTitle main>{t("title")}</SectionTitle>
+    <Section id='projects'>
+      <SectionTitle main>{t('title')}</SectionTitle>
       <GridContainer>
         {projects.map(
           (
@@ -35,15 +35,17 @@ const Projects = () => {
               <ImgContainer>
                 <Image
                   src={images[0]}
-                  alt="project image"
-                  width={432}
-                  layout="fixed"
-                  height={220}
-                  style={{ borderRadius: "10px 10px 0 0" }}
-                ></Image>
+                  alt='project image'
+                  width={400}
+                  layout='fixed'
+                  height={210}
+                  style={{
+                    borderRadius: '10px 10px 0 0',
+                    right: '1rem',
+                  }}></Image>
               </ImgContainer>
               <TitleContent>
-                <HeaderThree title="true">{t(`p${idx}`)}</HeaderThree>
+                <HeaderThree title='true'>{t(`p${idx}`)}</HeaderThree>
               </TitleContent>
               <CardInfo>{t(`d${idx}`)}</CardInfo>
               <TagsContainer>
@@ -59,34 +61,30 @@ const Projects = () => {
                 {isGame ? (
                   <>
                     <ExternalLinks
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={visit}
-                    >
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      href={visit}>
                       Source
                     </ExternalLinks>
                     <ExternalLinks
-                      rel="noopener noreferrer"
+                      rel='noopener noreferrer'
                       href={source}
-                      target="_blank"
-                    >
+                      target='_blank'>
                       Play!
                     </ExternalLinks>
                   </>
                 ) : (
                   <>
                     <ExternalLinks
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={source}
-                    >
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      href={source}>
                       Code
                     </ExternalLinks>
                     <ExternalLinks
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={visit}
-                    >
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      href={visit}>
                       Visit
                     </ExternalLinks>
                   </>

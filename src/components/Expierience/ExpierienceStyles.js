@@ -1,15 +1,19 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const JobsWrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 'auto';
   margin-top: 2rem;
   width: 100%;
+  row-gap: 2rem;
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: 'auto';
     gap: 3rem;
   }
-`
+`;
 
 export const Job = styled.div`
   display: flex;
@@ -22,7 +26,7 @@ export const Job = styled.div`
   @media ${(props) => props.theme.breakpoints.sm} {
     align-items: flex-start;
   }
-`
+`;
 
 export const JobTasks = styled.ul`
   display: flex;
@@ -31,7 +35,7 @@ export const JobTasks = styled.ul`
   justify-content: center;
   align-items: flex-start;
   gap: 1rem;
-`
+`;
 
 export const JobTask = styled.li`
   text-align: left;
@@ -39,4 +43,4 @@ export const JobTask = styled.li`
   align-items: center;
   justify-content: flex-start;
   gap: 5px;
-`
+`;

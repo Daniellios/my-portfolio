@@ -1,15 +1,15 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Section = styled.section`
-  display: ${(props) => (props.grid ? "grid" : "flex")};
-  flex-direction: ${(props) => (props.row ? "row" : "column")};
-  padding: ${(props) => (props.nopadding ? "0" : "32px 24px 0")};
+  display: ${(props) => (props.grid ? 'grid' : 'flex')};
+  flex-direction: ${(props) => (props.row ? 'row' : 'column')};
+  padding: ${(props) => (props.nopadding ? '0' : '32px 24px 0')};
   margin: 0 auto;
   max-width: 1440px;
   box-sizing: content-box;
   position: relative;
   grid-template-columns: 1fr 1fr;
-  margin-top: ${(props) => (props.isHero ? "6rem" : "2rem")};
+  margin-top: ${(props) => (props.isHero ? '6rem' : '2rem')};
 
   @media ${(props) => props.theme.breakpoints.md} {
     padding: 0 2rem;
@@ -18,7 +18,7 @@ export const Section = styled.section`
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: ${(props) => (props.nopadding ? "0" : "16px 16px 0")};
+    padding: ${(props) => (props.nopadding ? '0' : '16px 16px 0')};
     width: calc(100vw - 32px);
     flex-direction: column;
   }
@@ -51,54 +51,54 @@ export const SectionTitle = styled.h2`
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 16px;
-  padding: ${(props) => (props.main ? "0 0 0" : "0")};
+  padding: ${(props) => (props.main ? '0 0 0' : '0')};
 
   @media ${(props) => props.theme.breakpoints.md} {
-    font-size: ${(props) => (props.main ? "56px" : "48px")};
-    line-height: ${(props) => (props.main ? "56px" : "48px")};
+    font-size: ${(props) => (props.main ? '56px' : '48px')};
+    line-height: ${(props) => (props.main ? '56px' : '48px')};
     margin-bottom: 12px;
     text-align: left;
-    padding: ${(props) => (props.main ? "0 0 0" : "0")};
+    padding: ${(props) => (props.main ? '0 0 0' : '0')};
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
     font-size: 32px;
     line-height: 40px;
     margin-bottom: 8px;
-    padding: ${(props) => (props.main ? "16px 0 8px" : "0")};
+    padding: ${(props) => (props.main ? '16px 0 8px' : '0')};
     max-width: 100%;
   }
 `;
 
 export const SubSectionTitle = styled.h3`
   font-weight: 600;
-  font-size: ${(props) => (props.main ? "50px" : "36px")};
-  line-height: ${(props) => (props.main ? "54px" : "36px")};
+  font-size: ${(props) => (props.main ? '50px' : '36px')};
+  line-height: ${(props) => (props.main ? '54px' : '36px')};
   width: max-content;
   max-width: 100%;
-  align-self: ${(props) => (props.center ? "center" : "left")};
+  align-self: ${(props) => (props.center ? 'center' : 'left')};
   color: ${(props) => props.theme.colors.black};
   background: ${(props) => props.theme.colors.black};
   -webkit-background-clip: text;
   background-clip: text;
   // -webkit-text-fill-color: transparent;
   margin-bottom: 16px;
-  padding: ${(props) => (props.main ? "58px 0 16px" : "0")};
+  padding: ${(props) => (props.main ? '58px 0 16px' : '0')};
 
   @media ${(props) => props.theme.breakpoints.md} {
-    font-size: ${(props) => (props.main ? "40px" : "30px")};
-    line-height: ${(props) => (props.main ? "40px" : "30px")};
+    font-size: ${(props) => (props.main ? '40px' : '30px')};
+    line-height: ${(props) => (props.main ? '40px' : '30px')};
     margin-bottom: 12px;
-    padding: ${(props) => (props.main ? "40px 0 12px" : "0")};
+    padding: ${(props) => (props.main ? '40px 0 12px' : '0')};
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
     font-size: 32px;
     line-height: 40px;
-    font-size: ${(props) => (props.main ? "28px" : "24px")};
-    line-height: ${(props) => (props.main ? "32px" : "32px")};
+    font-size: ${(props) => (props.main ? '28px' : '24px')};
+    line-height: ${(props) => (props.main ? '32px' : '32px')};
     margin-bottom: 8px;
-    padding: ${(props) => (props.main ? "16px 0 8px" : "0")};
+    padding: ${(props) => (props.main ? '16px 0 8px' : '0')};
     max-width: 100%;
   }
 `;
@@ -129,7 +129,7 @@ export const SectionText = styled.p`
   font-size: 24px;
   line-height: 40px;
   font-weight: 400;
-  padding-bottom: ${(props) => (props.jobtitle ? "1rem" : "3.6rem")};
+  padding-bottom: ${(props) => (props.jobtitle ? '1rem' : '3.6rem')};
   text-align: left;
   color: ${(props) =>
     props.jobtitle
@@ -140,7 +140,7 @@ export const SectionText = styled.p`
     max-width: 670px;
     font-size: 20px;
     line-height: 32px;
-    padding-bottom: ${(props) => (props.jobtitle ? "0" : "24px")};
+    padding-bottom: ${(props) => (props.jobtitle ? '0' : '24px')};
     text-align: left;
   }
 
@@ -148,7 +148,7 @@ export const SectionText = styled.p`
     font-size: 16px;
     line-height: 24px;
     text-align: center;
-    padding-bottom: ${(props) => (props.jobtitle ? "0" : "1rem")};
+    padding-bottom: ${(props) => (props.jobtitle ? '0' : '1rem')};
   }
 `;
 
@@ -204,7 +204,7 @@ export const IconWrapper = styled.div`
 `;
 
 export const LinkContainer = styled.div`
-  margin-left: ${({ large }) => (large ? "24px" : "16px")};
+  margin-left: ${({ large }) => (large ? '24px' : '16px')};
   transition: 0.3s ease;
   justify-content: center;
   border-radius: 50px;
@@ -217,22 +217,22 @@ export const LinkContainer = styled.div`
   }
 
   @media ${(props) => props.theme.breakpoints.md} {
-    margin-left: ${({ large }) => (large ? "16px" : "8px")};
+    margin-left: ${({ large }) => (large ? '16px' : '8px')};
   }
   @media ${(props) => props.theme.breakpoints.sm} {
-    margin-left: ${({ large }) => (large ? "0" : "8px")};
+    margin-left: ${({ large }) => (large ? '0' : '8px')};
   }
 `;
 
 export const LinkIconImg = styled.div`
   display: flex;
-  height: ${({ large }) => (large ? "32px" : "24px")};
+  height: ${({ large }) => (large ? '32px' : '24px')};
 
   @media ${(props) => props.theme.breakpoints.md} {
-    height: ${({ nav }) => (nav ? "16px" : "24px")};
+    height: ${({ nav }) => (nav ? '16px' : '24px')};
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    height: ${({ large }) => (large ? "32px" : "16px")};
+    height: ${({ large }) => (large ? '32px' : '16px')};
   }
 `;
